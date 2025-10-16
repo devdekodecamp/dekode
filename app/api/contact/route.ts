@@ -14,9 +14,18 @@ export async function POST(req: Request) {
     const body = (await req.json()) as ContactPayload;
     const { firstName, lastName, email, phone, message } = body || {};
 
-    if (!firstName || !lastName || !email || !message) {
+    // Basic validations
+    if (!firstName || !lastName || !email) {
       return NextResponse.json(
         { success: false, message: "Missing required fields." },
+        { status: 400 }
+      );
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { success: false, message: "Invalid email address." },
         { status: 400 }
       );
     }
@@ -52,8 +61,8 @@ export async function POST(req: Request) {
     const { error } = await resend.emails.send({
       // Use a verified domain if available; fallback to Resend sandbox address
       from: "DeKode Camp <onboarding@resend.dev>",
-      to: ["info@dekodecamp.com"],
-      reply_to: email,
+      to: ["dev@dekodecamp.com"],
+      replyTo: email,
       subject: `Contact Form: ${fullName}`,
       html,
     });

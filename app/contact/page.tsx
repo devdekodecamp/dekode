@@ -134,6 +134,7 @@ export default function ContactPage() {
                     id="email"
                     type="email"
                     required
+                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -167,11 +168,10 @@ export default function ContactPage() {
                     htmlFor="message"
                     className="block text-sm font-medium mb-2 text-foreground"
                   >
-                    Message *
+                    Message (optional)
                   </label>
                   <Textarea
                     id="message"
-                    required
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
