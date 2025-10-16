@@ -1,0 +1,355 @@
+"use client";
+
+import type React from "react";
+
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { toast } from "sonner";
+import Script from "next/script";
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitting) return;
+    try {
+      setSubmitting(true);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.success) {
+        toast.error(data?.message || "Failed to send message.");
+        return;
+      }
+      toast.success("Message sent! We'll get back to you soon.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (err) {
+      toast.error("Unexpected error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen">
+      <Navigation />
+
+      {/* Hero */}
+      <section className="pt-32 pb-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center space-y-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-balance">
+            Get in <span className="gradient-text">Touch</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+            Have questions about our programs? We're here to help you start your
+            tech journey
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <Card className="p-10 bg-card">
+              <h2 className="text-3xl font-bold mb-8 text-foreground">
+                Send Us a Message
+              </h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium mb-2 text-foreground"
+                    >
+                      Last Name *
+                    </label>
+                    <Input
+                      id="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
+                      }
+                      placeholder="Doe"
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium mb-2 text-foreground"
+                    >
+                      First Name *
+                    </label>
+                    <Input
+                      id="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, firstName: e.target.value })
+                      }
+                      placeholder="John"
+                      className="h-12"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2 text-foreground"
+                  >
+                    Email Address *
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    placeholder="john@example.com"
+                    className="h-12"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium mb-2 text-foreground"
+                  >
+                    Phone Number
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    placeholder="+1 (555) 123-4567"
+                    className="h-12"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2 text-foreground"
+                  >
+                    Message *
+                  </label>
+                  <Textarea
+                    id="message"
+                    required
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    placeholder="Tell us about your goals and how we can help..."
+                    rows={6}
+                    className="min-h-40"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={submitting}
+                  className="w-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity h-12"
+                >
+                  {submitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </Card>
+
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold mb-8 text-foreground">
+                  Contact Information
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                      <Mail className="text-foreground" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1 text-foreground">
+                        Email
+                      </h3>
+                      <p className="text-muted-foreground">
+                        info@dekodecamp.com
+                      </p>
+                      <p className="text-muted-foreground">
+                        support@dekodecamp.com
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                      <Phone className="text-foreground" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1 text-foreground">
+                        Phone
+                      </h3>
+                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-sm text-muted-foreground">
+                        Mon-Fri, 9am-6pm EST
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-foreground" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1 text-foreground">
+                        Address
+                      </h3>
+                      <p className="text-muted-foreground">123 Tech Street</p>
+                      <p className="text-muted-foreground">
+                        Innovation City, TC 12345
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Media */}
+              <Card className="p-8 bg-secondary">
+                <h3 className="text-2xl font-bold mb-6 text-foreground">
+                  Follow Us
+                </h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Stay connected with us on social media for the latest updates,
+                  tips, and success stories from our community.
+                </p>
+                <div className="flex items-center gap-4">
+                  <a href="#" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/facebook-icon.png"
+                      alt="Facebook"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
+                  </a>
+                  <a href="#" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/linkedin-icon.png"
+                      alt="LinkedIn"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
+                  </a>
+                  <a href="#" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/instagram-icon.png"
+                      alt="Instagram"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
+                  </a>
+                </div>
+              </Card>
+
+              {/* Office Hours */}
+              <Card className="p-8 bg-card">
+                <h3 className="text-2xl font-bold mb-6 text-foreground">
+                  Office Hours
+                </h3>
+                <div className="space-y-1 text-muted-foreground">
+                  <div className="grid grid-cols-2 items-center gap-x-4 py-2">
+                    <span className="truncate">Monday - Friday</span>
+                    <span className="font-medium text-foreground text-right">
+                      9:00 AM - 6:00 PM
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 items-center gap-x-4 py-2 border-t border-border">
+                    <span className="truncate">Saturday</span>
+                    <span className="font-medium text-foreground text-right">
+                      10:00 AM - 4:00 PM
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 items-center gap-x-4 py-2 border-t border-border">
+                    <span className="truncate">Sunday</span>
+                    <span className="font-medium text-foreground text-right">
+                      Closed
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 lg:px-8 bg-secondary">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-4xl font-bold text-foreground">
+              Schedule a Meeting
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
+              Book a time that works for you to discuss your goals and how we
+              can help
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto bg-card rounded-lg overflow-hidden shadow-lg">
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/admin-dekodecamp/30min"
+              style={{
+                minWidth: "320px",
+                height: "1000px",
+                overflow: "hidden",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="lazyOnload"
+      />
+    </div>
+  );
+}
