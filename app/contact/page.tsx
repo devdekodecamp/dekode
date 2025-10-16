@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -24,6 +25,7 @@ export default function ContactPage() {
   });
 
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState<"idle" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,9 +39,11 @@ export default function ContactPage() {
       });
       const data = await res.json();
       if (!res.ok || !data?.success) {
+        setSent("error");
         toast.error(data?.message || "Failed to send message.");
         return;
       }
+      setSent("success");
       toast.success("Message sent! We'll get back to you soon.");
       setFormData({
         firstName: "",
@@ -49,6 +53,7 @@ export default function ContactPage() {
         message: "",
       });
     } catch (err) {
+      setSent("error");
       toast.error("Unexpected error. Please try again.");
     } finally {
       setSubmitting(false);
@@ -82,6 +87,22 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {sent === "success" && (
+                  <Alert className="bg-green-50 border-green-200 text-green-800">
+                    <AlertTitle>Message sent</AlertTitle>
+                    <AlertDescription>
+                      Thanks! We received your message and will respond shortly.
+                    </AlertDescription>
+                  </Alert>
+                )}
+                {sent === "error" && (
+                  <Alert className="bg-red-50 border-red-200 text-red-800">
+                    <AlertTitle>Something went wrong</AlertTitle>
+                    <AlertDescription>
+                      We couldn’t send your message. Please try again.
+                    </AlertDescription>
+                  </Alert>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
