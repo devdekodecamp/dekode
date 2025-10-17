@@ -93,16 +93,16 @@ export function Navigation() {
                 <div className="absolute top-full left-0 pt-2">
                   <div className="w-56 bg-background border border-border rounded-lg shadow-lg py-2">
                     <Link
+                      href="/programs/salesforce-adm201"
+                      className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                    >
+                      Salesforce Admin
+                    </Link>
+                    <Link
                       href="/programs/career-pathways"
                       className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
                     >
                       Career Pathways
-                    </Link>
-                    <Link
-                      href="/programs/salesforce-adm201"
-                      className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
-                    >
-                      Salesforce ADM201
                     </Link>
                   </div>
                 </div>
@@ -164,18 +164,18 @@ export function Navigation() {
               {programsOpen && (
                 <div className="pl-4 space-y-2">
                   <Link
+                    href="/programs/salesforce-adm201"
+                    className="block text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Salesforce Admin
+                  </Link>
+                  <Link
                     href="/programs/career-pathways"
                     className="block text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Career Pathways
-                  </Link>
-                  <Link
-                    href="/programs/salesforce-adm201"
-                    className="block text-foreground/80 hover:text-primary transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Salesforce ADM201
                   </Link>
                 </div>
               )}
