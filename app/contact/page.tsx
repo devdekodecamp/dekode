@@ -229,12 +229,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-lg mb-1 text-foreground">
                         Email
                       </h3>
-                      <p className="text-muted-foreground">
-                        info@dekodecamp.com
-                      </p>
-                      <p className="text-muted-foreground">
-                        support@dekodecamp.com
-                      </p>
+                      <p className="text-muted-foreground">hi@dekodecamp.com</p>
                     </div>
                   </div>
 
