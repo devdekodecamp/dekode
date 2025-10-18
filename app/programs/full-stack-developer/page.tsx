@@ -356,7 +356,7 @@ export default function FullStackDeveloperPage() {
                   <Target className="text-[#e01414]" size={24} />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground">
-                  Advanced Phase (Weeks 9-20)
+                  Advanced Phase (Weeks 9-18)
                 </h3>
               </div>
               <div className="space-y-4">
