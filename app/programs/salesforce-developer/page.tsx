@@ -2,7 +2,6 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -28,9 +27,6 @@ export default function SalesforceDeveloperPage() {
       <section className="pt-32 pb-16 px-6 lg:px-8 bg-gradient-to-br from-[#e01414]/5 via-[#760da3]/5 to-[#008cff]/5">
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <Badge className="bg-[#760da3] text-white px-4 py-2 text-sm font-medium">
-              Coming Soon
-            </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-balance">
               Coming Soon -{" "}
               <span className="gradient-text">Salesforce Development</span>
