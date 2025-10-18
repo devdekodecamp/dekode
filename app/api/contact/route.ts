@@ -61,7 +61,7 @@ export async function POST(req: Request) {
     const { error } = await resend.emails.send({
       // Use a verified domain if available; fallback to Resend sandbox address
       from: "DeKode Camp <onboarding@resend.dev>",
-      to: ["hi@dekodecamp.com"],
+      to: ["hello@dekodecamp.com"],
       replyTo: email,
       subject: `Contact Form: ${fullName}`,
       html,

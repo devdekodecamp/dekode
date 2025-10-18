@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="mt-4">
                 To exercise these rights, please contact us at
-                privacy@dekodecamp.com or through our contact form.
+                hello@dekodecamp.com or through our contact form.
               </p>
             </section>
 
@@ -223,9 +223,9 @@ export default function PrivacyPolicyPage() {
                 contact us:
               </p>
               <ul className="list-none space-y-2 ml-4">
-                <li>Email: privacy@dekodecamp.com</li>
-                <li>Phone: +1 (555) 123-4567</li>
-                <li>Address: 123 Tech Street, San Francisco, CA 94105</li>
+                <li>Email: hello@dekodecamp.com</li>
+                <li>Phone: +63 9770575349</li>
+                <li>Address: Manila, Philippines</li>
               </ul>
             </section>
           </div>

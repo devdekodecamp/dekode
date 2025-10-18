@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import {
   Code,
@@ -209,81 +210,662 @@ export default function CareerPathwaysPage() {
               Skill Progression Roadmap
             </h2>
             <p className="text-xl text-muted-foreground text-balance">
-              A clear path from beginner to advanced professional
+              Choose your career path and follow a structured learning journey
             </p>
           </div>
 
-          <div className="space-y-8">
-            <Card className="p-8 bg-card">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                  1
+          <Tabs defaultValue="salesforce-admin" className="w-full">
+            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-8 h-auto">
+              <TabsTrigger
+                value="salesforce-admin"
+                className="text-xs sm:text-sm md:text-base py-3 px-2"
+              >
+                <div className="flex items-center gap-2">
+                  <Cloud size={16} className="sm:hidden" />
+                  <span className="text-center">Salesforce Admin</span>
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Foundations (Weeks 1-4)
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Learn programming fundamentals, version control with Git,
-                    and basic web development concepts. Build your first simple
-                    projects.
-                  </p>
+              </TabsTrigger>
+              <TabsTrigger
+                value="salesforce-developer"
+                className="text-xs sm:text-sm md:text-base py-3 px-2"
+              >
+                <div className="flex items-center gap-2">
+                  <Database size={16} className="sm:hidden" />
+                  <span className="text-center">Salesforce Developer</span>
                 </div>
-              </div>
-            </Card>
+              </TabsTrigger>
+              <TabsTrigger
+                value="fullstack-developer"
+                className="text-xs sm:text-sm md:text-base py-3 px-2"
+              >
+                <div className="flex items-center gap-2">
+                  <Code size={16} className="sm:hidden" />
+                  <span className="text-center">Full Stack Developer</span>
+                </div>
+              </TabsTrigger>
+            </TabsList>
 
-            <Card className="p-8 bg-card">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                  2
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Core Skills (Weeks 5-12)
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Master your chosen technology stack, learn best practices,
-                    and build intermediate projects that demonstrate your
-                    growing skills.
-                  </p>
-                </div>
+            <TabsContent value="salesforce-admin" className="space-y-6">
+              <div className="text-center mb-8">
+                <Cloud className="mx-auto text-[#760da3] mb-4" size={40} />
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                  Salesforce Administrator Roadmap
+                </h3>
+                <p className="text-muted-foreground">
+                  Your path to becoming a certified Salesforce Admin, focused on
+                  configuration, automation, and data.
+                </p>
               </div>
-            </Card>
 
-            <Card className="p-8 bg-card">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                  3
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Advanced Topics (Weeks 13-20)
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Dive into advanced concepts, learn testing, deployment, and
-                    optimization. Work on complex, real-world projects.
-                  </p>
-                </div>
-              </div>
-            </Card>
+              <div className="space-y-6">
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      1
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Platform Foundations
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand CRM basics, the Admin role, and core
+                            platform features (Sales & Service Cloud)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Master the data model: Objects, Fields, and
+                            Relationships (Lookup vs. Master-Detail)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Configure user access: Profiles, Permission Sets,
+                            Page Layouts, and Record Types
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
 
-            <Card className="p-8 bg-card">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                  4
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Career Launch (Weeks 21-24)
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Build your capstone project, polish your portfolio, prepare
-                    for interviews, and get ready to land your first tech role.
-                  </p>
-                </div>
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      2
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Automation & Analytics
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Build powerful process automation using Flow Builder
+                            (Record-Triggered, Screen Flows)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand legacy automation (Workflow Rules,
+                            Process Builder) for maintenance
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Create insightful Reports (Tabular, Summary, Matrix)
+                            and build dynamic Dashboards
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      3
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Data & Security
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Manage data import/export with the Data Import
+                            Wizard and Data Loader
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Ensure data quality with Duplicate Management and
+                            Validation Rules
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Control data access using Roles, Sharing Rules, and
+                            OWDs (Org-Wide Defaults)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      4
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Go-Pro: Projects & Certification
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Apply your skills by building a portfolio project
+                            (e.g., a custom app for a mock business)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            (Optional but recommended) Study for and pass the
+                            Salesforce Administrator Certification
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Prepare for interviews by practicing common
+                            scenarios and using the STAR method
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
               </div>
-            </Card>
-          </div>
+            </TabsContent>
+
+            <TabsContent value="salesforce-developer" className="space-y-6">
+              <div className="text-center mb-8">
+                <Database className="mx-auto text-[#760da3] mb-4" size={40} />
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                  Salesforce Developer Skills Progression
+                </h3>
+                <p className="text-muted-foreground">
+                  A 5-level roadmap to advance from an Admin foundation to a
+                  platform expert.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      1
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Foundation (Admin Basics)
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Master all core Admin skills: Objects, data model,
+                            user access, and advanced automation with Flow
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      2
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Beginner Developer (Apex Basics)
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Learn Apex programming: Variables, loops, classes,
+                            and methods
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Write SOQL queries to fetch data and use DML to
+                            manipulate records
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Build basic Triggers (Before/After) and write
+                            essential Apex test classes
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      3
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Intermediate Developer (UI & Async)
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Build custom UIs with Lightning Web Components (LWC)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand legacy UI for maintenance: Visualforce
+                            and Aura Components
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Handle complex logic with asynchronous Apex (Future,
+                            Queueable, Batch, Schedulable)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      4
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Advanced Developer (Integration & DevOps)
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Integrate with external systems using REST/SOAP APIs
+                            and callouts
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Master advanced LWC, event handling, and
+                            authentication flows (OAuth)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Adopt DevOps practices: Git, SFDX, and CI/CD
+                            pipelines (e.g., GitHub Actions, Gearset)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      5
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Expert (Architecture & Specialization)
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Design scalable solutions using Apex design patterns
+                            and event-driven architecture (Platform Events)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Specialize in complex areas like Salesforce CPQ,
+                            B2B/B2C Commerce, or Industries (Vlocity)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="fullstack-developer" className="space-y-6">
+              <div className="text-center mb-8">
+                <Code className="mx-auto text-[#760da3] mb-4" size={40} />
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                  Full Stack Developer Roadmap
+                </h3>
+                <p className="text-muted-foreground">
+                  A technology-agnostic path taking you from frontend basics to
+                  backend deployment.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      1
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Frontend Foundations
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Master the building blocks of the web: HTML, CSS,
+                            and JavaScript
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Learn version control with Git and GitHub to manage
+                            your code
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      2
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Frontend Frameworks
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Choose and master one modern JavaScript framework:
+                            React, Vue, or Angular
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Learn how to manage packages using npm/yarn and
+                            style with CSS frameworks (e.g., Tailwind)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      3
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Backend Development
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Choose a backend language (e.g., Node.js, Python,
+                            Java, or C#)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Learn its primary web framework (e.g., Express.js
+                            for Node, Django or Flask for Python)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand how to build RESTful APIs for
+                            communication between frontend and backend
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      4
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        Data & Databases
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Learn a SQL database (e.g., PostgreSQL or MySQL) to
+                            manage relational data
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            (Optional) Explore NoSQL databases (e.g., MongoDB)
+                            for unstructured data
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand authentication/authorization concepts
+                            like JWT (JSON Web Tokens)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 sm:p-8 bg-card">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
+                      5
+                    </div>
+                    <div className="space-y-3 flex-1">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
+                        DevOps & Deployment
+                      </h3>
+                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>Learn Linux command-line basics</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Understand how to deploy your application to a cloud
+                            provider (e.g., AWS, Azure, or GCP)
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2
+                            size={14}
+                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
+                          />
+                          <span>
+                            Get familiar with CI/CD pipelines (e.g., GitHub
+                            Actions) for automated testing and deployment
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 

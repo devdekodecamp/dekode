@@ -124,7 +124,7 @@ export default function HomePage() {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Earn industry-recognized certifications including Salesforce
-                ADM201 and more.
+                Salesforce Admin and more.
               </p>
             </Card>
           </div>

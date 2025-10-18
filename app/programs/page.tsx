@@ -48,17 +48,18 @@ export default function ProgramsPage() {
               </Link>
             </Card>
 
-            {/* Salesforce ADM201 */}
+            {/* Salesforce Admin */}
             <Card className="p-10 space-y-6 hover:shadow-xl transition-shadow bg-card">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center">
                 <Cloud className="text-white" size={32} />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
-                Salesforce ADM201
+                Salesforce Admin
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Get certified as a Salesforce Administrator with our
-                comprehensive ADM201 certification preparation program.
+                comprehensive Salesforce Admin certification preparation
+                program.
               </p>
               <Link href="/programs/salesforce-adm201">
                 <Button className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity">

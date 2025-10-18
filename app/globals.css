@@ -121,6 +121,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  button,
+  a,
+  [role="button"] {
+    @apply cursor-pointer;
+  }
 }
 
 .gradient-text {
@@ -160,7 +165,9 @@
     rgba(118, 13, 163, 1) 50%,
     rgba(0, 140, 255, 1) 100%
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }

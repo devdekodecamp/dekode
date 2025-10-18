@@ -35,7 +35,7 @@ export default function SalesforceADM201Page() {
             </div>
             <p className="text-xl text-muted-foreground leading-relaxed text-balance">
               Become a certified Salesforce Administrator with our comprehensive
-              ADM201 certification preparation program
+              Salesforce Admin certification preparation program
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function SalesforceADM201Page() {
             <Card className="p-8 text-center space-y-4 bg-card">
               <Clock className="mx-auto text-[#760da3]" size={40} />
               <h3 className="text-2xl font-semibold text-foreground">
-                8 Weeks
+                4 Weeks
               </h3>
               <p className="text-muted-foreground">Self-paced learning</p>
             </Card>
@@ -68,7 +68,9 @@ export default function SalesforceADM201Page() {
               <h3 className="text-2xl font-semibold text-foreground">
                 Certification
               </h3>
-              <p className="text-muted-foreground">ADM201 exam preparation</p>
+              <p className="text-muted-foreground">
+                Salesforce Admin exam preparation
+              </p>
             </Card>
           </div>
         </div>
@@ -82,7 +84,8 @@ export default function SalesforceADM201Page() {
               What You'll Learn
             </h2>
             <p className="text-xl text-muted-foreground text-balance">
-              Master all the skills needed to pass the ADM201 certification exam
+              Master all the skills needed to pass the Salesforce Admin
+              certification exam
             </p>
           </div>
 
@@ -198,7 +201,7 @@ export default function SalesforceADM201Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="p-8 space-y-4 bg-card">
               <h3 className="text-2xl font-semibold text-foreground">
-                Career Changers
+                Career Shifters
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Looking to transition into a high-demand tech role with no prior
@@ -252,14 +255,14 @@ export default function SalesforceADM201Page() {
                     className="text-[#760da3] flex-shrink-0 mt-1"
                     size={20}
                   />
-                  <span>8 weeks of comprehensive training</span>
+                  <span>4 weeks of comprehensive training</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2
                     className="text-[#760da3] flex-shrink-0 mt-1"
                     size={20}
                   />
-                  <span>10-15 hours per week commitment</span>
+                  <span>6 hours per week commitment</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2
@@ -310,7 +313,8 @@ export default function SalesforceADM201Page() {
             Ready to Become a Certified Salesforce Administrator?
           </h2>
           <p className="text-xl text-muted-foreground text-balance">
-            Join our next cohort and start your journey to ADM201 certification
+            Join our next cohort and start your journey to Salesforce Admin
+            certification
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button

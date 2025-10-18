@@ -229,7 +229,9 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-lg mb-1 text-foreground">
                         Email
                       </h3>
-                      <p className="text-muted-foreground">hi@dekodecamp.com</p>
+                      <p className="text-muted-foreground">
+                        hello@dekodecamp.com
+                      </p>
                     </div>
                   </div>
 
@@ -241,7 +243,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-lg mb-1 text-foreground">
                         Phone
                       </h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+63 9770575349</p>
                       <p className="text-sm text-muted-foreground">
                         Mon-Fri, 9am-6pm EST
                       </p>
@@ -256,9 +258,8 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-lg mb-1 text-foreground">
                         Address
                       </h3>
-                      <p className="text-muted-foreground">123 Tech Street</p>
                       <p className="text-muted-foreground">
-                        Innovation City, TC 12345
+                        Manila, Philippines
                       </p>
                     </div>
                   </div>

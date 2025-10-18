@@ -49,15 +49,18 @@ export default function BlogsPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  10 Essential Skills Every Developer Needs in 2025
+                  10 Essential Skills Every Salesforce Admin Needs in 2025
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Discover the most in-demand technical and soft skills that
-                  will set you apart in today's competitive job market.
+                  will set you apart in today's competitive Salesforce job
+                  market.
                 </p>
-                <Button variant="link" className="p-0 h-auto text-[#760da3]">
-                  Read More <ArrowRight className="ml-1" size={16} />
-                </Button>
+                <Link href="/blogs/essential-salesforce-admin-skills-2025">
+                  <Button variant="link" className="p-0 h-auto text-[#760da3]">
+                    Read More <ArrowRight className="ml-1" size={16} />
+                  </Button>
+                </Link>
               </div>
             </Card>
 
@@ -74,15 +77,17 @@ export default function BlogsPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  How to Build a Portfolio That Gets You Hired
+                  The Salesforce Admin Journey: What to Expect
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Learn what hiring managers look for in developer portfolios
-                  and how to showcase your projects effectively.
+                  Learn what hiring managers look for in Salesforce Admin
+                  portfolios and how to showcase your projects effectively.
                 </p>
-                <Button variant="link" className="p-0 h-auto text-[#760da3]">
-                  Read More <ArrowRight className="ml-1" size={16} />
-                </Button>
+                <Link href="/blogs/salesforce-admin-journey-what-to-expect">
+                  <Button variant="link" className="p-0 h-auto text-[#760da3]">
+                    Read More <ArrowRight className="ml-1" size={16} />
+                  </Button>
+                </Link>
               </div>
             </Card>
 
@@ -99,116 +104,17 @@ export default function BlogsPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  Career Change Success: From Teacher to Developer
+                  How to Build a Portfolio That Gets You Hired
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   An inspiring story from one of our graduates who successfully
-                  transitioned into tech from education.
+                  transitioned into Salesforce Admin from education.
                 </p>
-                <Button variant="link" className="p-0 h-auto text-[#760da3]">
-                  Read More <ArrowRight className="ml-1" size={16} />
-                </Button>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Events & Webinars */}
-      <section className="py-24 px-6 lg:px-8 bg-secondary">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">
-              Upcoming Events & Webinars
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Join our free events to learn more about tech careers and our
-              programs
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <Card className="p-8 hover:shadow-xl transition-shadow bg-card">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-xl bg-muted flex flex-col items-center justify-center text-foreground">
-                    <div className="text-3xl font-bold">25</div>
-                    <div className="text-sm">JAN</div>
-                  </div>
-                </div>
-                <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Video size={16} />
-                    <span>Online Webinar</span>
-                    <span>•</span>
-                    <span>6:00 PM EST</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Breaking Into Tech: A Beginner's Guide
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Join us for a free webinar where we'll discuss the best
-                    paths to start your tech career, what skills you need, and
-                    how to get your first job in the industry.
-                  </p>
-                  <Button>Register Now</Button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-8 hover:shadow-xl transition-shadow bg-card">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-xl bg-muted flex flex-col items-center justify-center text-foreground">
-                    <div className="text-3xl font-bold">02</div>
-                    <div className="text-sm">FEB</div>
-                  </div>
-                </div>
-                <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Video size={16} />
-                    <span>Online Webinar</span>
-                    <span>•</span>
-                    <span>7:00 PM EST</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Salesforce Career Opportunities in 2025
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Discover the growing demand for Salesforce professionals and
-                    learn how our ADM201 certification program can help you land
-                    a high-paying role.
-                  </p>
-                  <Button>Register Now</Button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-8 hover:shadow-xl transition-shadow bg-card">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-xl bg-muted flex flex-col items-center justify-center text-foreground">
-                    <div className="text-3xl font-bold">15</div>
-                    <div className="text-sm">FEB</div>
-                  </div>
-                </div>
-                <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Video size={16} />
-                    <span>Online Workshop</span>
-                    <span>•</span>
-                    <span>6:00 PM EST</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">
-                    Build Your First Web App: Live Coding Session
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Join our instructors for a hands-on coding workshop where
-                    you'll build a complete web application from scratch using
-                    modern technologies.
-                  </p>
-                  <Button>Register Now</Button>
-                </div>
+                <Link href="/blogs/build-portfolio-that-gets-you-hired">
+                  <Button variant="link" className="p-0 h-auto text-[#760da3]">
+                    Read More <ArrowRight className="ml-1" size={16} />
+                  </Button>
+                </Link>
               </div>
             </Card>
           </div>
