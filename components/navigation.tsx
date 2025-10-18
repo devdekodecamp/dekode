@@ -99,6 +99,18 @@ export function Navigation() {
                       Salesforce Admin
                     </Link>
                     <Link
+                      href="/programs/salesforce-developer"
+                      className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                    >
+                      Salesforce Developer
+                    </Link>
+                    <Link
+                      href="/programs/full-stack-developer"
+                      className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
+                    >
+                      Full Stack Developer
+                    </Link>
+                    <Link
                       href="/programs/career-pathways"
                       className="block px-4 py-3 text-foreground hover:bg-secondary transition-colors"
                     >
@@ -169,6 +181,20 @@ export function Navigation() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Salesforce Admin
+                  </Link>
+                  <Link
+                    href="/programs/salesforce-developer"
+                    className="block text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Salesforce Developer
+                  </Link>
+                  <Link
+                    href="/programs/full-stack-developer"
+                    className="block text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Full Stack Developer
                   </Link>
                   <Link
                     href="/programs/career-pathways"
