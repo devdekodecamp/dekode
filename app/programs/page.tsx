@@ -251,7 +251,7 @@ export default function ProgramsPage() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-semibold text-foreground mb-3">
-                  Create Account and Book Consultation
+                  Apply Now and Book Consultation
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Click Apply Now to book your online consultation. Fill out the
