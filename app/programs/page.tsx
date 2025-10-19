@@ -26,7 +26,7 @@ export default function ProgramsPage() {
       {/* Programs Grid */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {/* Career Pathways */}
             <Card className="p-10 space-y-6 hover:shadow-xl transition-shadow bg-card">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center">
@@ -62,6 +62,48 @@ export default function ProgramsPage() {
                 program.
               </p>
               <Link href="/programs/salesforce-adm201">
+                <Button className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity">
+                  Learn More
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </Link>
+            </Card>
+
+            {/* Salesforce Developer */}
+            <Card className="p-10 space-y-6 hover:shadow-xl transition-shadow bg-card">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center">
+                <Cloud className="text-white" size={32} />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground">
+                Salesforce Developer
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Master Salesforce development with Apex, Lightning Web
+                Components, and custom integrations. Build powerful applications
+                that extend Salesforce's capabilities.
+              </p>
+              <Link href="/programs/salesforce-developer">
+                <Button className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity">
+                  Learn More
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </Link>
+            </Card>
+
+            {/* Full Stack Developer */}
+            <Card className="p-10 space-y-6 hover:shadow-xl transition-shadow bg-card">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center">
+                <Briefcase className="text-white" size={32} />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground">
+                Full Stack Developer
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Master both frontend and backend development to build complete
+                web applications. Learn modern technologies and frameworks to
+                become a versatile developer.
+              </p>
+              <Link href="/programs/full-stack-developer">
                 <Button className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity">
                   Learn More
                   <ArrowRight className="ml-2" size={18} />
@@ -181,8 +223,137 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Application Process */}
       <section className="py-24 px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">
+              How to Apply
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Follow these simple steps to begin your tech career journey with
+              us
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#760da3] text-white flex items-center justify-center text-xl font-bold">
+                  1
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  Create Account and Book Consultation
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Start by creating your account and scheduling an online
+                  consultation session. Complete the registration forms and
+                  receive email confirmation with your scheduled appointment
+                  details.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#760da3] text-white flex items-center justify-center text-xl font-bold">
+                  2
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  Complete Readiness Assessment
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Take our comprehensive assessment to evaluate your readiness
+                  for tech training. This evaluation provides an overview of
+                  essential qualities needed to succeed in the course. Complete
+                  the entire assessment for accurate evaluation.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#760da3] text-white flex items-center justify-center text-xl font-bold">
+                  3
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  Attend Live Information Session
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  On your scheduled date, join our online live consultation
+                  session. Here, you'll receive comprehensive details about our
+                  tech career programs. Feel free to ask questions and seek
+                  clarifications during this group session.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#760da3] text-white flex items-center justify-center text-xl font-bold">
+                  4
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  Personal Consultation Meeting
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Following the group session, you'll have a one-on-one
+                  consultation where we'll discuss your assessment results and
+                  provide personalized recommendations. This session also allows
+                  us to better understand your goals before you embark on your
+                  tech career journey.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#760da3] text-white flex items-center justify-center text-xl font-bold">
+                  5
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  Begin Your Training
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Upon completing the application process, you'll receive
+                  details based on your chosen schedule. Get ready to embark on
+                  your exciting coding journey with us!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+              >
+                Sign Up Now
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-6 lg:px-8 bg-secondary">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-balance">
             Ready to Get Started?

@@ -30,8 +30,8 @@ export default function FullStackDeveloperPage() {
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold text-balance">
-              Coming Soon -{" "}
-              <span className="gradient-text">Full Stack Development</span>
+              <span className="gradient-text">Full Stack Developer</span> –{" "}
+              <span className="text-muted-foreground">Coming Soon</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               Master both frontend and backend development to build complete web

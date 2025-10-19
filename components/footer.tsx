@@ -85,6 +85,23 @@ export function Footer() {
                   Salesforce Admin
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  href="/programs/salesforce-developer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Salesforce Developer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/programs/full-stack-developer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Full Stack Developer
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -124,7 +141,12 @@ export function Footer() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-80 transition-opacity">
+            <a
+              href="https://www.facebook.com/DeKodeCamp"
+              className="hover:opacity-80 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/facebook-icon.png"
                 alt="Facebook"
@@ -142,7 +164,12 @@ export function Footer() {
                 className="w-8 h-8"
               />
             </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
+            <a
+              href="https://www.instagram.com/dekodecamp/"
+              className="hover:opacity-80 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/instagram-icon.png"
                 alt="Instagram"

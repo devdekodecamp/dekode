@@ -276,7 +276,12 @@ export default function ContactPage() {
                   tips, and success stories from our community.
                 </p>
                 <div className="flex items-center gap-4">
-                  <a href="#" className="hover:opacity-80 transition-opacity">
+                  <a
+                    href="https://www.facebook.com/DeKodeCamp"
+                    className="hover:opacity-80 transition-opacity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/facebook-icon.png"
                       alt="Facebook"
@@ -294,7 +299,12 @@ export default function ContactPage() {
                       className="w-12 h-12"
                     />
                   </a>
-                  <a href="#" className="hover:opacity-80 transition-opacity">
+                  <a
+                    href="https://www.instagram.com/dekodecamp/"
+                    className="hover:opacity-80 transition-opacity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/instagram-icon.png"
                       alt="Instagram"

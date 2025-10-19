@@ -28,8 +28,8 @@ export default function SalesforceDeveloperPage() {
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold text-balance">
-              Coming Soon -{" "}
-              <span className="gradient-text">Salesforce Development</span>
+              <span className="gradient-text">Salesforce Developer</span> –{" "}
+              <span className="text-muted-foreground">Coming Soon</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               Master the art of Salesforce development with Apex, Lightning Web
