@@ -1,11 +1,16 @@
+"use client";
+
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Cloud, Briefcase, ArrowRight, CheckCircle2 } from "lucide-react";
+import { EnrollmentModal } from "@/components/enrollment-modal";
+import { useState } from "react";
 
 export default function ProgramsPage() {
+  const [enrollOpen, setEnrollOpen] = useState(false);
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -249,10 +254,9 @@ export default function ProgramsPage() {
                   Create Account and Book Consultation
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Start by creating your account and scheduling an online
-                  consultation session. Complete the registration forms and
-                  receive email confirmation with your scheduled appointment
-                  details.
+                  Click Apply Now to book your online consultation. Fill out the
+                  registration form, and you’ll receive an email confirmation
+                  with your appointment details.
                 </p>
               </div>
             </div>
@@ -339,15 +343,15 @@ export default function ProgramsPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
-              >
-                Sign Up Now
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+              onClick={() => setEnrollOpen(true)}
+            >
+              Apply Now
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+            <EnrollmentModal open={enrollOpen} onOpenChange={setEnrollOpen} />
           </div>
         </div>
       </section>
