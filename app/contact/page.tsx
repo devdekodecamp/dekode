@@ -305,7 +305,12 @@ export default function ContactPage() {
                       className="w-12 h-12"
                     />
                   </a>
-                  <a href="#" className="hover:opacity-80 transition-opacity">
+                  <a
+                    href="https://www.linkedin.com/company/dekodecamp/"
+                    className="hover:opacity-80 transition-opacity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/linkedin-icon.png"
                       alt="LinkedIn"

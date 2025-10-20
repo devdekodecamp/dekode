@@ -155,15 +155,6 @@ export function Footer() {
                 className="w-8 h-8"
               />
             </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/linkedin-icon.png"
-                alt="LinkedIn"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-            </a>
             <a
               href="https://www.instagram.com/dekodecamp/"
               className="hover:opacity-80 transition-opacity"
@@ -173,6 +164,20 @@ export function Footer() {
               <Image
                 src="/instagram-icon.png"
                 alt="Instagram"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+            </a>{" "}
+            <a
+              href="https://www.linkedin.com/company/dekodecamp/"
+              className="hover:opacity-80 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/linkedin-icon.png"
+                alt="LinkedIn"
                 width={32}
                 height={32}
                 className="w-8 h-8"
