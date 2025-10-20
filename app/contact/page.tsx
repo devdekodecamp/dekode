@@ -290,15 +290,7 @@ export default function ContactPage() {
                       className="w-12 h-12"
                     />
                   </a>
-                  <a href="#" className="hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/linkedin-icon.png"
-                      alt="LinkedIn"
-                      width={48}
-                      height={48}
-                      className="w-12 h-12"
-                    />
-                  </a>
+
                   <a
                     href="https://www.instagram.com/dekodecamp/"
                     className="hover:opacity-80 transition-opacity"
@@ -308,6 +300,15 @@ export default function ContactPage() {
                     <Image
                       src="/instagram-icon.png"
                       alt="Instagram"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
+                  </a>
+                  <a href="#" className="hover:opacity-80 transition-opacity">
+                    <Image
+                      src="/linkedin-icon.png"
+                      alt="LinkedIn"
                       width={48}
                       height={48}
                       className="w-12 h-12"
