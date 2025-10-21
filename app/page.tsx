@@ -299,8 +299,8 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button
+                <Link href="https://forms.zohopublic.com/dekodecamp1/form/PreApplicationForm/formperma/haKx_YVh3fmfI73JTn1hNe---rZKi2g3MYLB8S-NJSk">
                 size="lg"
-                onClick={() => setEnrollModalOpen(true)}
                 className={`${bgGradientBrand} text-white hover:opacity-90 transition-opacity text-lg px-8 h-14`}
               >
                 Get Started Today
