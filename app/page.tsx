@@ -298,7 +298,6 @@ export default function HomePage() {
             DeKode Camp 
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link href="/contact">
               <Button
                 size="lg"
                 onClick={() => setEnrollModalOpen(true)}
