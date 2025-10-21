@@ -294,8 +294,8 @@ export default function HomePage() {
             Ready to Start Your Tech Journey?
           </h2>
           <p className="text-xl text-muted-foreground text-balance">
-            Join thousands of students who have transformed their careers with
-            DeKode Camp
+            Join our Cohort and transform your career with
+            DeKode Camp 
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link href="/contact">
