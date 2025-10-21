@@ -301,6 +301,7 @@ export default function HomePage() {
             <Link href="/contact">
               <Button
                 size="lg"
+                onClick={() => setEnrollModalOpen(true)}
                 className={`${bgGradientBrand} text-white hover:opacity-90 transition-opacity text-lg px-8 h-14`}
               >
                 Get Started Today
