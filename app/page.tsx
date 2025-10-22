@@ -80,7 +80,7 @@ export default function HomePage() {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Launch your career in tech with our flagship Salesforce Admin
-                program—no prior experience required. Master workflows,
+                program — no prior experience required. Master workflows,
                 automation, and platform management to become job-ready for one
                 of the most in-demand roles in the Salesforce ecosystem.
               </p>
