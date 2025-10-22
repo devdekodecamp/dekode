@@ -68,8 +68,8 @@ export default function SalesforceDeveloperPage() {
               What You'll Learn
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our comprehensive Salesforce Developer program will take you from
-              beginner to advanced developer, covering all essential
+              Our comprehensive Salesforce Development program will take you
+              from beginner to advanced developer, covering all essential
               technologies and best practices.
             </p>
           </div>
@@ -334,7 +334,7 @@ export default function SalesforceDeveloperPage() {
                 <Award className="text-[#760da3]" size={32} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Salesforce Developer
+                Salesforce Development
               </h3>
               <p className="text-muted-foreground text-sm">
                 Build custom applications and extend Salesforce functionality

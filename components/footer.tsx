@@ -91,7 +91,7 @@ export function Footer() {
                   href="/programs/salesforce-developer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Salesforce Developer
+                  Salesforce Development
                 </Link>
               </li>
               <li>
@@ -99,7 +99,7 @@ export function Footer() {
                   href="/programs/full-stack-developer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Full Stack Developer
+                  Full Stack Development
                 </Link>
               </li>
             </ul>

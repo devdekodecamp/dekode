@@ -187,7 +187,7 @@ export function Navigation() {
                     className="block text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Salesforce Developer
+                    Salesforce Development
                   </Link>
                   <Link
                     href="/programs/full-stack-developer"

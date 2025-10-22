@@ -386,7 +386,7 @@ export default function SalesforceAdminJourneyPage() {
 
                   <Card className="p-6 bg-card">
                     <h3 className="text-xl font-semibold text-foreground mb-3">
-                      Salesforce Developer
+                      Salesforce Development
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Transition to development by learning Apex, Lightning Web

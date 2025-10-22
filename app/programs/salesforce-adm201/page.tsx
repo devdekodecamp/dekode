@@ -48,9 +48,9 @@ export default function SalesforceADM201Page() {
             <Card className="p-8 text-center space-y-4 bg-card">
               <Clock className="mx-auto text-[#760da3]" size={40} />
               <h3 className="text-2xl font-semibold text-foreground">
-                4 Weeks
+                5 Weeks
               </h3>
-              <p className="text-muted-foreground">Self-paced learning</p>
+              <p className="text-muted-foreground">Hands on training</p>
             </Card>
 
             <Card className="p-8 text-center space-y-4 bg-card">
@@ -255,7 +255,7 @@ export default function SalesforceADM201Page() {
                     className="text-[#760da3] flex-shrink-0 mt-1"
                     size={20}
                   />
-                  <span>4 weeks of comprehensive training</span>
+                  <span>5 weeks of comprehensive training</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2

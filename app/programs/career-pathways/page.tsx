@@ -102,7 +102,7 @@ export default function CareerPathwaysPage() {
             <Card className="p-8 space-y-4 bg-card">
               <Database className="text-[#760da3]" size={40} />
               <h3 className="text-2xl font-semibold text-foreground">
-                Salesforce Developer
+                Salesforce Development
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Build custom applications and integrations using Apex, Lightning
@@ -127,7 +127,7 @@ export default function CareerPathwaysPage() {
             <Card className="p-8 space-y-4 bg-card">
               <Code className="text-[#760da3]" size={40} />
               <h3 className="text-2xl font-semibold text-foreground">
-                Full-Stack Developer
+                Full-Stack Development
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Master both frontend and backend development to build complete
@@ -152,7 +152,7 @@ export default function CareerPathwaysPage() {
             <Card className="p-8 space-y-4 bg-card">
               <Laptop className="text-[#760da3]" size={40} />
               <h3 className="text-2xl font-semibold text-foreground">
-                Frontend Developer
+                Frontend Development
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Specialize in creating beautiful, responsive user interfaces and
@@ -444,7 +444,7 @@ export default function CareerPathwaysPage() {
               <div className="text-center mb-8">
                 <Database className="mx-auto text-[#760da3] mb-4" size={40} />
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
-                  Salesforce Developer Skills Progression
+                  Salesforce Development Skills Progression
                 </h3>
                 <p className="text-muted-foreground">
                   A 5-level roadmap to advance from an Admin foundation to a

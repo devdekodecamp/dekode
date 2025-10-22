@@ -1,9 +1,13 @@
+"use client";
+
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { EnrollmentModal } from "@/components/enrollment-modal";
 import {
   Code2,
   Users,
@@ -17,6 +21,7 @@ const bgGradientBrand =
   "bg-gradient-to-br from-[#e01414] via-[#760da3] to-[#008cff]";
 
 export default function HomePage() {
+  const [enrollOpen, setEnrollOpen] = useState(false);
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -70,7 +75,8 @@ export default function HomePage() {
               Our <span className="gradient-text">Courses</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Choose the perfect starting point for your tech journey — designed for aspiring professionals.
+              Choose the perfect starting point for your tech journey — designed
+              for aspiring professionals.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -293,19 +299,17 @@ export default function HomePage() {
             Ready to Start Your Tech Journey?
           </h2>
           <p className="text-xl text-muted-foreground text-balance">
-            Join our Cohort and transform your career with
-            DeKode Camp 
+            Join our Cohort and transform your career with DeKode Camp
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button
-                <Link href="/contact">
-                size="lg"
-                className={`${bgGradientBrand} text-white hover:opacity-90 transition-opacity text-lg px-8 h-14`}
-              >
-                Get Started Today
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              className={`${bgGradientBrand} text-white hover:opacity-90 transition-opacity text-lg px-8 h-14`}
+              onClick={() => setEnrollOpen(true)}
+            >
+              Get Started Today
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
             <Link href="/programs">
               <Button
                 size="lg"
@@ -318,6 +322,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enrollment Modal */}
+      <EnrollmentModal open={enrollOpen} onOpenChange={setEnrollOpen} />
 
       <Footer />
     </div>

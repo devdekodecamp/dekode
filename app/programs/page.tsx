@@ -80,7 +80,7 @@ export default function ProgramsPage() {
                 <Cloud className="text-white" size={32} />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
-                Salesforce Developer
+                Salesforce Development
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Master Salesforce development with Apex, Lightning Web
@@ -101,7 +101,7 @@ export default function ProgramsPage() {
                 <Briefcase className="text-white" size={32} />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
-                Full Stack Developer
+                Full Stack Development
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Master both frontend and backend development to build complete
