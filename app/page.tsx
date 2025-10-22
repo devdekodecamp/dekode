@@ -70,8 +70,7 @@ export default function HomePage() {
               Our <span className="gradient-text">Courses</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Choose the perfect starting point for your tech journey.
-              professionals.
+              Choose the perfect starting point for your tech journey — designed for aspiring professionals.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,7 +87,7 @@ export default function HomePage() {
             </Card>
             <Card className="p-8 space-y-4 bg-card border border-border shadow-md">
               <h3 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
-                Salesforce Developer
+                Salesforce Development
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Build real-world solutions with the power of Salesforce. Learn
@@ -99,7 +98,7 @@ export default function HomePage() {
             </Card>
             <Card className="p-8 space-y-4 bg-card border border-border shadow-md">
               <h3 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">
-                Full Stack Developer
+                Full Stack Development
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Become a versatile software engineer. Our Full Stack Developer
