@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   description:
     "Transform your career with industry-leading tech education programs",
   generator: "v0.app",
+  other: {
+    'google-site-verification': '1fuWZmc3V5sbSViwYpsRKgpNkSNEQVtjCtPSO2NMr_k',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
