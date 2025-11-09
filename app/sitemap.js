@@ -15,6 +15,7 @@ export default async function sitemap() {
     {
       url: 'https://www.dekodecamp.com/programs/salesforce-developer',
       lastModified: new Date(),
+    },
     {
       url: 'https://www.dekodecamp.com/programs/full-stack-developer',
       lastModified: new Date(),
