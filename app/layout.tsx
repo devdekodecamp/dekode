@@ -37,6 +37,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/fav.png" type="image/png" />
+        <link rel="shortcut icon" href="/fav.png" type="image/png">
+        </link>
         <meta
           property="og:title"
           content="DeKode Camp - Decode Tech, Unlock Your Future"
