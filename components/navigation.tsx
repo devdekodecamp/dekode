@@ -80,7 +80,10 @@ export function Navigation() {
               onMouseEnter={() => setProgramsOpen(true)}
               onMouseLeave={() => setProgramsOpen(false)}
             >
-              <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium py-2">
+              <Link 
+                href="/programs"
+                className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium py-2"
+              >
                 Programs
                 <ChevronDown
                   size={16}
@@ -88,7 +91,7 @@ export function Navigation() {
                     programsOpen ? "rotate-180" : ""
                   }`}
                 />
-              </button>
+              </Link>
               {programsOpen && (
                 <div className="absolute top-full left-0 pt-2">
                   <div className="w-56 bg-background border border-border rounded-lg shadow-lg py-2">
@@ -161,18 +164,26 @@ export function Navigation() {
               About
             </Link>
             <div className="space-y-2">
-              <button
-                onClick={() => setProgramsOpen(!programsOpen)}
-                className="flex items-center justify-between w-full text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Programs
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${
-                    programsOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              <div className="flex items-center justify-between">
+                <Link
+                  href="/programs"
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Programs
+                </Link>
+                <button
+                  onClick={() => setProgramsOpen(!programsOpen)}
+                  className="p-1 text-foreground hover:text-primary transition-colors"
+                >
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform ${
+                      programsOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
               {programsOpen && (
                 <div className="pl-4 space-y-2">
                   <Link
