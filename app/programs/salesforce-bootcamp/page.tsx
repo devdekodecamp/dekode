@@ -35,22 +35,23 @@ export default function SalesforceBootcampPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Image Only */}
-      <section className="relative min-h-[70vh] px-6 lg:px-8 py-24 overflow-hidden flex items-center">
+      <section className="relative min-h-[30vh] px-4 sm:px-16 lg:px-8 py-12 sm:py-6 lg:py-6 overflow-hidden flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="relative w-full h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+          <div className="rounded-lg overflow-hidden shadow-2xl">
             <Image
               src="/sign.png"
               alt="Salesforce Admin Bootcamp - Students learning"
-              fill
-              className="object-cover"
+              width={1920}
+              height={1080}
               priority
+              className="w-full h-auto object-contain lg:object-cover"
             />
           </div>
         </div>
       </section>
 
       {/* Section 1 - Headline, Sub-headline, and CTA */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-12 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <div className="space-y-6">
@@ -68,7 +69,7 @@ export default function SalesforceBootcampPage() {
               <a href={ZOHO_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+                  className="bg-gradient-to-br from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
                 >
                   Apply Now
                   <ArrowRight className="ml-2" size={20} />
@@ -217,8 +218,7 @@ export default function SalesforceBootcampPage() {
                   size={24}
                 />
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Starting January 2026: a complete roadmap to help you launch
-                  into tech
+                  5-week structured learning designed for beginners
                 </p>
               </div>
 
@@ -228,19 +228,7 @@ export default function SalesforceBootcampPage() {
                   size={24}
                 />
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Starting January 2026: a complete roadmap to help you launch
-                  into tech
-                </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <CheckCircle2
-                  className="text-[#760da3] flex-shrink-0 mt-1"
-                  size={24}
-                />
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Starting January 2026: a complete roadmap to help you launch
-                  into tech
+                  Official certification support included
                 </p>
               </div>
             </div>
@@ -321,7 +309,7 @@ export default function SalesforceBootcampPage() {
                 </li>
                 <li>
                   <span className="text-foreground font-medium">Sessions:</span>{" "}
-                  Every Saturday
+                  Saturdays (10AM - 3PM)
                 </li>
                 <li>
                   <span className="text-foreground font-medium">
@@ -347,7 +335,7 @@ export default function SalesforceBootcampPage() {
               <a href={ZOHO_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+                  className="bg-gradient-to-l from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
                 >
                   Apply Now
                   <ArrowRight className="ml-2" size={20} />
@@ -449,7 +437,7 @@ export default function SalesforceBootcampPage() {
               <a href={ZOHO_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+                  className="bg-gradient-to-t from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
                 >
                   Apply Now
                   <ArrowRight className="ml-2" size={20} />
@@ -472,7 +460,7 @@ export default function SalesforceBootcampPage() {
 
             <div className="space-y-8">
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
                   1
                 </div>
                 <div className="flex-1">
@@ -487,7 +475,7 @@ export default function SalesforceBootcampPage() {
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-b from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
                   2
                 </div>
                 <div className="flex-1">
@@ -502,7 +490,7 @@ export default function SalesforceBootcampPage() {
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-tr from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
                   3
                 </div>
                 <div className="flex-1">
@@ -517,7 +505,7 @@ export default function SalesforceBootcampPage() {
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-bl from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg">
                   4
                 </div>
                 <div className="flex-1">
@@ -615,7 +603,7 @@ export default function SalesforceBootcampPage() {
             <a href={ZOHO_FORM_URL} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
+                className="bg-gradient-to-tl from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity text-lg px-8 h-14"
               >
                 Apply Now
                 <ArrowRight className="ml-2" size={20} />
