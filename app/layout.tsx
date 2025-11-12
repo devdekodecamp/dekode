@@ -15,16 +15,51 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "DeKode Camp - Decode Tech, Unlock Your Future",
+  metadataBase: new URL("https://www.dekodecamp.com"),
+  title: {
+    default: "DeKode Camp - Decode Tech, Unlock Your Future",
+    template: "%s | DeKode Camp",
+  },
   description:
     "Transform your career with industry-leading tech education programs",
   generator: "v0.app",
-  other: {
-    'google-site-verification': '1fuWZmc3V5sbSViwYpsRKgpNkSNEQVtjCtPSO2NMr_k',
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "DeKode Camp - Decode Tech, Unlock Your Future",
+    description:
+      "Transform your career with industry-leading tech education programs",
+    url: "https://www.dekodecamp.com",
+    siteName: "DeKode Camp",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "DeKode Camp logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DeKode Camp - Decode Tech, Unlock Your Future",
+    description:
+      "Transform your career with industry-leading tech education programs",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  other: {
+    "google-site-verification": "1fuWZmc3V5sbSViwYpsRKgpNkSNEQVtjCtPSO2NMr_k",
   },
 };
 
@@ -37,8 +72,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/fav.png" type="image/png" />
-        <link rel="shortcut icon" href="/fav.png" type="image/png">
-        </link>
+        <link rel="shortcut icon" href="/fav.png" type="image/png" />
+        <link rel="canonical" href="https://www.dekodecamp.com" />
         <meta
           property="og:title"
           content="DeKode Camp - Decode Tech, Unlock Your Future"
@@ -49,7 +84,7 @@ export default function RootLayout({
         />
         <meta property="og:image" content="/logo.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dekodecamp.com" />
+        <meta property="og:url" content="https://www.dekodecamp.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"

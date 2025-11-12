@@ -1,36 +1,26 @@
+const baseUrl = "https://www.dekodecamp.com";
+
+const routes = [
+  "/",
+  "/about",
+  "/blogs",
+  "/blogs/build-portfolio-that-gets-you-hired",
+  "/blogs/essential-salesforce-admin-skills-2025",
+  "/blogs/salesforce-admin-journey-what-to-expect",
+  "/contact",
+  "/privacy-policy",
+  "/programs",
+  "/programs/career-pathways",
+  "/programs/full-stack-developer",
+  "/programs/salesforce-adm201",
+  "/programs/salesforce-developer",
+];
+
 export default async function sitemap() {
-  return [
-    {
-      url: 'https://dekodecamp.com/',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://dekodecamp.com/about',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://www.dekodecamp.com/programs/salesforce-adm201',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://www.dekodecamp.com/programs/salesforce-developer',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://www.dekodecamp.com/programs/full-stack-developer',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://www.dekodecamp.com/programs/career-pathways',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://www.dekodecamp.com/blogs',
-      lastModified: new Date(),
-    },
-        {
-      url: 'https://www.dekodecamp.com/contact',
-      lastModified: new Date(),
-    },
-  ];
+  const lastModified = new Date();
+
+  return routes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified,
+  }));
 }
