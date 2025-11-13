@@ -72,7 +72,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/fav.png" type="image/png" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="shortcut icon" href="/fav.png" type="image/png" />
         <link rel="canonical" href="https://www.dekodecamp.com" />
         <meta
