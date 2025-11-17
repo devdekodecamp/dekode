@@ -367,7 +367,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto bg-card rounded-lg overflow-hidden shadow-lg">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/admin-dekodecamp/30min"
+              data-url="https://calendly.com/hello-dekodecamp/30min"
               style={{
                 minWidth: "320px",
                 height: "1000px",
