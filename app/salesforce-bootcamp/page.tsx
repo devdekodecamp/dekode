@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
@@ -34,9 +35,26 @@ const ZOHO_FORM_URL =
 export default function SalesforceBootcampPage() {
   return (
     <div className="min-h-screen">
+      {/* Header - Logo Only */}
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-center h-20">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="DeKode Camp"
+                width={200}
+                height={50}
+                className="h-12 w-auto"
+              />
+            </Link>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section - Image Only */}
-      <section className="relative min-h-[30vh] px-4 sm:px-16 lg:px-8 py-12 sm:py-6 lg:py-6 overflow-hidden flex items-center">
-        <div className="max-w-7xl mx-auto w-full">
+      <section className="py-12 px-4 sm:px-16 lg:px-8">
+        <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-2xl">
             <Image
               src="/sign.png"
@@ -44,7 +62,7 @@ export default function SalesforceBootcampPage() {
               width={1920}
               height={1080}
               priority
-              className="w-full h-auto object-contain lg:object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>
