@@ -14,6 +14,7 @@ const routes = [
   "/programs/full-stack-developer",
   "/programs/salesforce-adm201",
   "/programs/salesforce-developer",
+  "/salesforce-bootcamp",
 ];
 
 export default async function sitemap() {
