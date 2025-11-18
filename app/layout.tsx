@@ -23,9 +23,6 @@ export const metadata: Metadata = {
   description:
     "Transform your career with industry-leading tech education programs",
   generator: "v0.app",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "DeKode Camp - Decode Tech, Unlock Your Future",
     description:
@@ -74,7 +71,6 @@ export default function RootLayout({
         <link rel="icon" href="/fav.png" type="image/png" />
         <link rel="icon" href="/favicon.ico" sizes="16x16" />
         <link rel="shortcut icon" href="/fav.png" type="image/png" />
-        <link rel="canonical" href="https://www.dekodecamp.com" />
         <meta
           property="og:title"
           content="DeKode Camp - Decode Tech, Unlock Your Future"
