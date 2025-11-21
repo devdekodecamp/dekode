@@ -460,31 +460,6 @@ export default function CareerPathwaysPage() {
                     </div>
                     <div className="space-y-3 flex-1">
                       <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
-                        Foundation (Admin Basics)
-                      </h3>
-                      <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2
-                            size={14}
-                            className="text-[#760da3] flex-shrink-0 mt-1 sm:mt-0.5"
-                          />
-                          <span>
-                            Master all core Admin skills: Objects, data model,
-                            user access, and advanced automation with Flow
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6 sm:p-8 bg-card">
-                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
-                      2
-                    </div>
-                    <div className="space-y-3 flex-1">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
                         Beginner Developer (Apex Basics)
                       </h3>
                       <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
@@ -526,7 +501,7 @@ export default function CareerPathwaysPage() {
                 <Card className="p-6 sm:p-8 bg-card">
                   <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
-                      3
+                      2
                     </div>
                     <div className="space-y-3 flex-1">
                       <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
@@ -570,7 +545,7 @@ export default function CareerPathwaysPage() {
                 <Card className="p-6 sm:p-8 bg-card">
                   <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
-                      4
+                      3
                     </div>
                     <div className="space-y-3 flex-1">
                       <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
