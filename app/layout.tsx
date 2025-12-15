@@ -109,6 +109,24 @@ export default function RootLayout({
         <CookieConsent />
         <Analytics />
 
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-H1RRJKCPVP"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-inline"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-H1RRJKCPVP');
+            `,
+          }}
+        />
+
         {/* 3. Add the main <Script> component at the end of <body> */}
         <Script
           id="meta-pixel"
