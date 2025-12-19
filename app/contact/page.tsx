@@ -15,6 +15,22 @@ import { useState } from "react";
 import { toast } from "sonner";
 import Script from "next/script";
 
+declare global {
+  interface Window {
+    grecaptcha: {
+      enterprise: {
+        ready: (callback: () => void) => void;
+        execute: (
+          siteKey: string,
+          options: { action: string }
+        ) => Promise<string>;
+      };
+    };
+  }
+}
+
+const RECAPTCHA_SITE_KEY = "6LfMTTAsAAAAACG7wkRkriaB9TPRlg5McqXZoR3X";
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -26,16 +42,80 @@ export default function ContactPage() {
 
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState<"idle" | "success" | "error">("idle");
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
+
     try {
       setSubmitting(true);
+
+      // Get reCAPTCHA token
+      // Skip reCAPTCHA in development/localhost if not configured
+      const isDevelopment = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+      let recaptchaToken = "";
+      
+      if (isDevelopment) {
+        // In development, try to get token but don't fail if reCAPTCHA isn't configured for localhost
+        try {
+          if (window.grecaptcha && window.grecaptcha.enterprise) {
+            await new Promise<void>((resolve) => {
+              window.grecaptcha.enterprise.ready(async () => {
+                try {
+                  recaptchaToken = await window.grecaptcha.enterprise.execute(
+                    RECAPTCHA_SITE_KEY,
+                    { action: "submit" }
+                  );
+                  resolve();
+                } catch (err) {
+                  // If localhost isn't in allowed domains, use a bypass token for development
+                  console.warn("reCAPTCHA not configured for localhost. Using development bypass.");
+                  recaptchaToken = "development-bypass-token";
+                  resolve();
+                }
+              });
+            });
+          } else {
+            recaptchaToken = "development-bypass-token";
+          }
+        } catch (err) {
+          console.warn("reCAPTCHA error in development:", err);
+          recaptchaToken = "development-bypass-token";
+        }
+      } else {
+        // Production: require valid reCAPTCHA token
+        if (window.grecaptcha && window.grecaptcha.enterprise) {
+          await new Promise<void>((resolve) => {
+            window.grecaptcha.enterprise.ready(async () => {
+              try {
+                recaptchaToken = await window.grecaptcha.enterprise.execute(
+                  RECAPTCHA_SITE_KEY,
+                  { action: "submit" }
+                );
+                resolve();
+              } catch (err) {
+                console.error("reCAPTCHA error:", err);
+                toast.error("reCAPTCHA verification failed. Please try again.");
+                setSubmitting(false);
+                return;
+              }
+            });
+          });
+        } else {
+          toast.error("reCAPTCHA not loaded. Please refresh the page.");
+          setSubmitting(false);
+          return;
+        }
+      }
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
       const data = await res.json();
       if (!res.ok || !data?.success) {
@@ -379,6 +459,11 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+      <Script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6LfMTTAsAAAAACG7wkRkriaB9TPRlg5McqXZoR3X"
+        strategy="lazyOnload"
+        onLoad={() => setRecaptchaLoaded(true)}
+      />
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="lazyOnload"
