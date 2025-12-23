@@ -80,7 +80,7 @@ export function Navigation() {
               onMouseEnter={() => setProgramsOpen(true)}
               onMouseLeave={() => setProgramsOpen(false)}
             >
-              <Link 
+              <Link
                 href="/programs"
                 className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium py-2"
               >
