@@ -14,22 +14,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 import Script from "next/script";
-
-declare global {
-  interface Window {
-    grecaptcha: {
-      enterprise: {
-        ready: (callback: () => void) => void;
-        execute: (
-          siteKey: string,
-          options: { action: string }
-        ) => Promise<string>;
-      };
-    };
-  }
-}
-
-const RECAPTCHA_SITE_KEY = "6LfMTTAsAAAAACG7wkRkriaB9TPRlg5McqXZoR3X";
+import { getRecaptchaToken, RECAPTCHA_SITE_KEY } from "@/lib/recaptcha";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -287,7 +272,7 @@ export default function ContactPage() {
                   type="submit"
                   size="lg"
                   disabled={submitting}
-                  className="w-full bg-gradient-to-r from-[#e01414] via-[#760da3] to-[#008cff] text-white hover:opacity-90 transition-opacity h-12"
+                  className="w-full    text-white hover:opacity-90 transition-opacity h-12"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                 </Button>

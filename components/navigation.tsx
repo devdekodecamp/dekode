@@ -130,6 +130,13 @@ export function Navigation() {
             >
               Blogs
             </Link>
+            <Link
+              href="https://app.dekodecamp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline">Login</Button>
+            </Link>
             <Link href="/contact">
               <Button className="bg-gradient-brand text-white hover:opacity-90 transition-opacity">
                 Contact Us
@@ -223,6 +230,16 @@ export function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Blogs
+            </Link>
+            <Link
+              href="https://app.dekodecamp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Button variant="outline" className="w-full">
+                Login
+              </Button>
             </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-gradient-brand text-white">
