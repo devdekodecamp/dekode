@@ -237,7 +237,7 @@ export function Navigation() {
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="w-full bg-gradient-brand text-white">
                 Login
               </Button>
             </Link>
