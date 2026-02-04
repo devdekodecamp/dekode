@@ -51,6 +51,11 @@ export const metadata: Metadata = {
     "tech bootcamp",
     "Salesforce Admin January 2026",
     "online Salesforce training",
+    "Salesforce bootcamp manila philippines",
+    "Salesforce bootcamp philippines",
+    "Salesforce training near me",
+    "Salesforce bootcamp near me",
+    "Salesforce admin training philippines",
     "Salesforce for beginners",
   ],
 };
