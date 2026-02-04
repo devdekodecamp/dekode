@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, ArrowRight, Video } from "lucide-react";
 
 export default function BlogsPage() {
@@ -36,6 +37,40 @@ export default function BlogsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* New Blog Post */}
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow bg-card">
+              <div className="h-48 relative">
+                  <Image 
+                    src="/images/blogs/2026-trends.png" 
+                    alt="2026 Developer Trends" 
+                    fill
+                    className="object-cover"
+                  />
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Calendar size={16} />
+                    Feb 4, 2026
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock size={16} />6 min read
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">
+                  2026 Developer Trends: Why Salesforce & Full Stack Skills Pay More
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  The gap between enterprise platforms and custom code is closing.
+                  Discover why the "Hybrid Developer" is becoming the most sought-after...
+                </p>
+                <Link href="/blogs/2026-developer-trends-salesforce-fullstack">
+                  <Button variant="link" className="p-0 h-auto text-[#760da3]">
+                    Read More <ArrowRight className="ml-1" size={16} />
+                  </Button>
+                </Link>
+              </div>
+            </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow bg-card">
               <div className="h-48 bg-gradient-to-br from-[#e01414]/20 via-[#760da3]/20 to-[#008cff]/20" />
               <div className="p-6 space-y-4">
