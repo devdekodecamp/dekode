@@ -71,27 +71,34 @@ export default function BlogsPage() {
                 </Link>
               </div>
             </Card>
+            {/* 2nd New Blog Post - AI Agents */}
             <Card className="overflow-hidden hover:shadow-xl transition-shadow bg-card">
-              <div className="h-48 bg-gradient-to-br from-[#e01414]/20 via-[#760da3]/20 to-[#008cff]/20" />
+              <div className="h-48 relative">
+                   <Image 
+                     src="/images/blogs/ai-agents-salesforce.png" 
+                     alt="AI Agents in Salesforce" 
+                     fill
+                     className="object-cover"
+                   />
+              </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Calendar size={16} />
-                    Jan 15, 2025
+                    Feb 2, 2026
                   </span>
                   <span className="flex items-center gap-1">
                     <Clock size={16} />5 min read
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  10 Essential Skills Every Salesforce Admin Needs in 2025
+                  The Rise of AI Agents in the Salesforce Ecosystem
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Discover the most in-demand technical and soft skills that
-                  will set you apart in today's competitive Salesforce job
-                  market.
+                  Move over, Chatbots. Autonomous AI Agents are here to revolutionize
+                  CRM workflows. Here is what every developer needs to know.
                 </p>
-                <Link href="/blogs/essential-salesforce-admin-skills-2025">
+                <Link href="/blogs/ai-agents-salesforce-ecosystem">
                   <Button variant="link" className="p-0 h-auto text-[#760da3]">
                     Read More <ArrowRight className="ml-1" size={16} />
                   </Button>
@@ -99,53 +106,34 @@ export default function BlogsPage() {
               </div>
             </Card>
 
+            {/* 3rd New Blog Post - LWC */}
             <Card className="overflow-hidden hover:shadow-xl transition-shadow bg-card">
-              <div className="h-48 bg-gradient-to-br from-[#008cff]/20 via-[#760da3]/20 to-[#e01414]/20" />
+               <div className="h-48 relative">
+                   <Image 
+                     src="/images/blogs/mastering-lwc.png" 
+                     alt="Mastering LWC" 
+                     fill
+                     className="object-cover"
+                   />
+              </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Calendar size={16} />
-                    Jan 12, 2025
+                    Jan 28, 2026
                   </span>
                   <span className="flex items-center gap-1">
                     <Clock size={16} />7 min read
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  The Salesforce Admin Journey: What to Expect
+                  Mastering Lightning Web Components: Your Ticket to High-Impact Roles
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Learn what hiring managers look for in Salesforce Admin
-                  portfolios and how to showcase your projects effectively.
+                  Why LWC skills are the single biggest differentiator for Salesforce Developers
+                  in 2026 and how to bridge the gap from Admin to Dev.
                 </p>
-                <Link href="/blogs/salesforce-admin-journey-what-to-expect">
-                  <Button variant="link" className="p-0 h-auto text-[#760da3]">
-                    Read More <ArrowRight className="ml-1" size={16} />
-                  </Button>
-                </Link>
-              </div>
-            </Card>
-
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow bg-card">
-              <div className="h-48 bg-gradient-to-br from-[#760da3]/20 via-[#e01414]/20 to-[#008cff]/20" />
-              <div className="p-6 space-y-4">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={16} />
-                    Jan 8, 2025
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={16} />6 min read
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  How to Build a Portfolio That Gets You Hired
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  An inspiring story from one of our graduates who successfully
-                  transitioned into Salesforce Admin from education.
-                </p>
-                <Link href="/blogs/build-portfolio-that-gets-you-hired">
+                <Link href="/blogs/mastering-lwc-enterprise-dev">
                   <Button variant="link" className="p-0 h-auto text-[#760da3]">
                     Read More <ArrowRight className="ml-1" size={16} />
                   </Button>
