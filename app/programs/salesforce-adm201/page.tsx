@@ -30,7 +30,7 @@ export default function SalesforceADM201Page() {
             <div className="flex items-center gap-3 mb-4">
               <Cloud className="text-[#760da3]" size={48} />
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance">
-                <span className="gradient-text">Salesforce Admin</span>
+                <span className="gradient-text">Salesforce Administrator Training</span>
               </h1>
             </div>
             <p className="text-xl text-muted-foreground leading-relaxed text-balance">

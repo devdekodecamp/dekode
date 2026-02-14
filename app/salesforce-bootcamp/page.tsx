@@ -75,7 +75,7 @@ export default function SalesforceBootcampPage() {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
                 Launch Your Career in Tech: Apply for the{" "}
-                <span className="gradient-text">Salesforce Admin Bootcamp</span>
+                <span className="gradient-text">Salesforce Administrator Bootcamp</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed text-balance">
                 A beginner-friendly, high-impact program for students,

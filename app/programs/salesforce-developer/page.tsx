@@ -20,17 +20,28 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Salesforce Developer Program (Coming Soon)",
+  title:
+    "Salesforce Developer Bootcamp — Apex, LWC & Integrations (Coming Soon) | DeKode Camp",
   description:
-    "Master Salesforce development with Apex, Lightning Web Components, and API integrations. DeKode Camp's 16-week program takes you from beginner to advanced developer.",
+    "Salesforce Developer Bootcamp: Master Apex, Lightning Web Components, and API integrations in 16 weeks. Coming soon — get notified for early-bird pricing.",
   alternates: { canonical: "/programs/salesforce-developer" },
   openGraph: {
-    title: "Salesforce Developer Program | DeKode Camp",
-    description: "Master Apex, LWC, and Salesforce integrations in 16 weeks. Coming Soon.",
+    title:
+      "Salesforce Developer Bootcamp — Apex, LWC & Integrations | DeKode Camp",
+    description:
+      "Master Apex, LWC, and Salesforce integrations in 16 weeks. Coming Soon.",
     url: "https://www.dekodecamp.com/programs/salesforce-developer",
     type: "website",
   },
-  keywords: ["Salesforce Developer program", "Apex training", "LWC course", "Salesforce development", "Platform Developer certification"],
+  keywords: [
+    "Salesforce Developer bootcamp",
+    "Salesforce development bootcamp",
+    "Salesforce Developer program",
+    "Apex training",
+    "LWC course",
+    "Salesforce development",
+    "Platform Developer certification",
+  ],
 };
 
 export default function SalesforceDeveloperPage() {
