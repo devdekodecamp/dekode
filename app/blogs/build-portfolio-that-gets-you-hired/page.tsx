@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,20 @@ import {
   Briefcase,
   Target,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Build a Portfolio That Gets You Hired as a Salesforce Admin",
+  description:
+    "Learn how to build a standout Salesforce Admin portfolio that impresses hiring managers. Real project ideas, practical tips, and a step-by-step guide.",
+  alternates: { canonical: "/blogs/build-portfolio-that-gets-you-hired" },
+  openGraph: {
+    title: "Build a Portfolio That Gets You Hired as a Salesforce Admin",
+    description: "Learn how to build a standout Salesforce Admin portfolio that impresses hiring managers.",
+    url: "https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired",
+    type: "article",
+  },
+  keywords: ["Salesforce portfolio", "Salesforce Admin", "get hired Salesforce", "Salesforce projects", "career tips"],
+};
 
 export default function BuildPortfolioThatGetsYouHiredPage() {
   return (

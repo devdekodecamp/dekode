@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,20 @@ import {
   ArrowLeft,
   CheckCircle2,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Essential Salesforce Admin Skills for 2025",
+  description:
+    "Discover the essential technical and soft skills every Salesforce Admin needs in 2025. From Flow Builder to AI tools, stay ahead in your Salesforce career.",
+  alternates: { canonical: "/blogs/essential-salesforce-admin-skills-2025" },
+  openGraph: {
+    title: "Essential Salesforce Admin Skills for 2025",
+    description: "Discover the essential technical and soft skills every Salesforce Admin needs in 2025.",
+    url: "https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025",
+    type: "article",
+  },
+  keywords: ["Salesforce Admin skills", "Salesforce Admin 2025", "Flow Builder", "Salesforce certification", "Salesforce career"],
+};
 
 export default function EssentialSalesforceAdminSkills2025Page() {
   return (

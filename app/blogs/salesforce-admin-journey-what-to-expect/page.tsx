@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,20 @@ import {
   BookOpen,
   Award,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Salesforce Admin Journey: What to Expect",
+  description:
+    "A complete guide to the Salesforce Admin career journey. Learn what to expect at every stage, from certification to landing your first role and beyond.",
+  alternates: { canonical: "/blogs/salesforce-admin-journey-what-to-expect" },
+  openGraph: {
+    title: "Salesforce Admin Journey: What to Expect",
+    description: "A complete guide to the Salesforce Admin career journey — from certification to landing your first role.",
+    url: "https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect",
+    type: "article",
+  },
+  keywords: ["Salesforce Admin journey", "Salesforce career path", "Salesforce certification", "Salesforce job", "admin career"],
+};
 
 export default function SalesforceAdminJourneyPage() {
   return (

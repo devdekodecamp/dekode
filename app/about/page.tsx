@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "About Us - Our Mission & Story",
+  description:
+    "Learn about DeKode Camp's mission to transform careers through industry-leading Salesforce and full-stack developer training programs. Discover our story, values, and approach.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About DeKode Camp - Our Mission & Story",
+    description:
+      "Learn about DeKode Camp's mission to transform careers through industry-leading tech education programs.",
+    url: "https://www.dekodecamp.com/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About DeKode Camp - Our Mission & Story",
+    description:
+      "Learn about DeKode Camp's mission to transform careers through industry-leading tech education programs.",
+  },
+  keywords: [
+    "DeKode Camp",
+    "tech education",
+    "Salesforce training",
+    "full stack developer bootcamp",
+    "career transformation",
+    "coding bootcamp",
+  ],
+};
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";

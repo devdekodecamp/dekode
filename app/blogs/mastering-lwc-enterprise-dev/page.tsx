@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,20 @@ import {
   Layout,
   Code,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Mastering Lightning Web Components for Enterprise Development",
+  description:
+    "A comprehensive guide to mastering Lightning Web Components (LWC) for enterprise Salesforce development. Learn best practices, patterns, and real-world techniques.",
+  alternates: { canonical: "/blogs/mastering-lwc-enterprise-dev" },
+  openGraph: {
+    title: "Mastering Lightning Web Components for Enterprise Development",
+    description: "A comprehensive guide to mastering LWC for enterprise Salesforce development.",
+    url: "https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev",
+    type: "article",
+  },
+  keywords: ["Lightning Web Components", "LWC", "Salesforce development", "enterprise development", "Salesforce developer"],
+};
 
 export default function MasteringLwcPage() {
   return (

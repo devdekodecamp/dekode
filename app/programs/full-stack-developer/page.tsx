@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,20 @@ import {
   Server,
   Palette,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Full Stack Developer Program (Coming Soon)",
+  description:
+    "Master frontend and backend development with DeKode Camp's 18-week Full Stack Developer program. Learn React, Node.js, databases, Docker, and deploy real projects.",
+  alternates: { canonical: "/programs/full-stack-developer" },
+  openGraph: {
+    title: "Full Stack Developer Program | DeKode Camp",
+    description: "Master frontend and backend development in 18 weeks. Coming Soon.",
+    url: "https://www.dekodecamp.com/programs/full-stack-developer",
+    type: "website",
+  },
+  keywords: ["full stack developer program", "React bootcamp", "Node.js training", "web development course", "coding bootcamp"],
+};
 
 export default function FullStackDeveloperPage() {
   return (

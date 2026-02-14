@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,20 @@ import {
   BarChart3,
   Database,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Career Pathways - Structured Tech Learning Tracks",
+  description:
+    "Explore DeKode Camp's Career Pathways: structured learning tracks for Salesforce Admin, Salesforce Developer, Full Stack, Frontend, and Backend careers. From beginner to job-ready.",
+  alternates: { canonical: "/programs/career-pathways" },
+  openGraph: {
+    title: "Career Pathways | DeKode Camp",
+    description: "Structured learning tracks designed to take you from beginner to job-ready in tech.",
+    url: "https://www.dekodecamp.com/programs/career-pathways",
+    type: "website",
+  },
+  keywords: ["career pathways", "tech career tracks", "Salesforce careers", "developer career roadmap", "coding bootcamp"],
+};
 
 export default function CareerPathwaysPage() {
   return (

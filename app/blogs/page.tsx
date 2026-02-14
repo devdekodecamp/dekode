@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Blog - Salesforce & Tech Career Insights",
+  description:
+    "Stay up-to-date with the latest Salesforce trends, developer career advice, and tech education insights from DeKode Camp's expert instructors.",
+  alternates: {
+    canonical: "/blogs",
+  },
+  openGraph: {
+    title: "DeKode Camp Blog - Salesforce & Tech Career Insights",
+    description:
+      "Stay up-to-date with the latest Salesforce trends, developer career advice, and tech education insights.",
+    url: "https://www.dekodecamp.com/blogs",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DeKode Camp Blog - Salesforce & Tech Career Insights",
+    description:
+      "Stay up-to-date with the latest Salesforce trends, developer career advice, and tech education insights.",
+  },
+  keywords: [
+    "Salesforce blog",
+    "tech career advice",
+    "developer trends",
+    "Salesforce admin tips",
+    "LWC tutorials",
+    "coding bootcamp blog",
+  ],
+};
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";

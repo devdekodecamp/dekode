@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,20 @@ import {
   Code2,
   Briefcase,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "2026 Developer Trends: Salesforce & Full Stack",
+  description:
+    "Explore the biggest developer trends shaping 2026 — from AI-powered Salesforce tools to full-stack innovations. Stay ahead of the curve with DeKode Camp.",
+  alternates: { canonical: "/blogs/2026-developer-trends-salesforce-fullstack" },
+  openGraph: {
+    title: "2026 Developer Trends: Salesforce & Full Stack",
+    description: "Explore the biggest developer trends shaping 2026 — from AI-powered Salesforce tools to full-stack innovations.",
+    url: "https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack",
+    type: "article",
+  },
+  keywords: ["developer trends 2026", "Salesforce trends", "full stack development", "AI in Salesforce", "tech career"],
+};
 
 export default function DeveloperTrends2026Page() {
   return (

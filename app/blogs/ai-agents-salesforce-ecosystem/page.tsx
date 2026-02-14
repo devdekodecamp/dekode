@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,20 @@ import {
   BrainCircuit,
   Workflow,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "AI Agents in the Salesforce Ecosystem",
+  description:
+    "Discover how AI agents like Einstein Copilot and Agentforce are transforming the Salesforce ecosystem. Learn what this means for admins and developers.",
+  alternates: { canonical: "/blogs/ai-agents-salesforce-ecosystem" },
+  openGraph: {
+    title: "AI Agents in the Salesforce Ecosystem",
+    description: "Discover how AI agents are transforming the Salesforce ecosystem and what it means for your career.",
+    url: "https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem",
+    type: "article",
+  },
+  keywords: ["AI agents Salesforce", "Einstein Copilot", "Agentforce", "Salesforce AI", "Salesforce automation"],
+};
 
 export default function AiAgentsSalesforcePage() {
   return (

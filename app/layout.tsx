@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   description:
     "Transform your career with industry-leading tech education programs",
-  generator: "v0.app",
+
   openGraph: {
     title: "DeKode Camp - Decode Tech, Unlock Your Future",
     description:
@@ -71,27 +71,30 @@ export default function RootLayout({
         <link rel="icon" href="/fav.png" type="image/png" />
         <link rel="icon" href="/favicon.ico" sizes="16x16" />
         <link rel="shortcut icon" href="/fav.png" type="image/png" />
-        <meta
-          property="og:title"
-          content="DeKode Camp - Decode Tech, Unlock Your Future"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "DeKode Camp",
+              url: "https://www.dekodecamp.com",
+              logo: "https://www.dekodecamp.com/logo.png",
+              description:
+                "Transform your career with industry-leading tech education programs. Offering Salesforce Admin, Salesforce Developer, and Full Stack Developer training.",
+              sameAs: [
+                "https://www.facebook.com/dekodecamp",
+                "https://www.instagram.com/dekodecamp",
+                "https://www.linkedin.com/company/dekodecamp",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "info@dekodecamp.com",
+                contactType: "customer service",
+              },
+            }),
+          }}
         />
-        <meta
-          property="og:description"
-          content="Transform your career with industry-leading tech education programs."
-        />
-        <meta property="og:image" content="/logo.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dekodecamp.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="DeKode Camp - Decode Tech, Unlock Your Future"
-        />
-        <meta
-          name="twitter:description"
-          content="Transform your career with industry-leading tech education programs."
-        />
-        <meta name="twitter:image" content="/logo.png" />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {/* 2. Add the <noscript> tag right after <body> */}
