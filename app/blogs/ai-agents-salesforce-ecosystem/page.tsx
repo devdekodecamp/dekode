@@ -58,10 +58,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What are AI agents in Salesforce?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "AI agents in Salesforce are autonomous software programs powered by AI that can reason, plan, and execute multi-step tasks within the CRM without explicit hard-coding for every edge case. Unlike traditional automation (Flow, Apex), AI agents — such as Einstein Copilot and Agentforce — can analyze unstructured data like emails and calls, self-initiate actions based on goals, and learn from feedback to improve over time.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How will AI agents affect Salesforce developers?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "AI agents will not replace Salesforce developers — they will require a new set of skills. Developers will need to master Prompt Engineering for CRM (crafting constraints for Agentforce), Guardrails & Security (ensuring agents don't hallucinate or leak sensitive data), and Tool Creation (building the Apex actions and Flow templates that agents call to perform work). Flow Builder and Apex remain the foundational 'limbs' that the AI 'brain' uses to interact with data.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What is the difference between AI agents and traditional Salesforce automation?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Traditional Salesforce automation (Flow, Apex) uses if-this-then-that logic with explicitly coded rules for each scenario. AI agents introduce 'Agency' — they are autonomous (self-initiating actions based on goals, not just triggers), capable of reasoning (analyzing unstructured data to make decisions), and adaptive (learning from feedback to improve execution paths over time). This makes them ideal for complex customer service and sales scenarios.",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "AI Agents in the Salesforce Ecosystem", item: "https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function AiAgentsSalesforcePage() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

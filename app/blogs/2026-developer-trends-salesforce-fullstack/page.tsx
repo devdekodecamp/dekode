@@ -59,10 +59,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What are the top developer trends in 2026?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "The top developer trends in 2026 include the rise of the 'Hybrid Developer' who combines Salesforce platform skills with full-stack development, AI-powered Salesforce tools like Agentforce and Einstein Copilot, Lightning Web Components (LWC) as a bridge between web standards and the Salesforce ecosystem, headless Salesforce apps with Next.js/React front-ends, and DevOps for Salesforce (CI/CD with DX and GitHub Actions).",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Why do Salesforce and Full Stack developers earn more?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Developers with dual proficiency in Salesforce and JavaScript/full-stack development earn on average 25% more than single-specialty counterparts. This is because companies need developers who can build custom Next.js or React front-ends that connect to Salesforce back-ends. Salesforce handles authentication, database, and security out of the box, while Full Stack skills enable unique UX — making these 'Hybrid Developers' the most sought-after role in tech.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What skills drive the highest developer salaries in 2026?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "The three skills driving the highest developer salaries in 2026 are: Lightning Web Components (LWC) — the bridge between web standards and Salesforce, Salesforce API Integration — building headless apps where Next.js or React serves as the front-end for Salesforce data, and DevOps for Salesforce — understanding CI/CD pipelines with Salesforce DX and GitHub Actions for enterprise deployments.",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "2026 Developer Trends: Salesforce & Full Stack", item: "https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function DeveloperTrends2026Page() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

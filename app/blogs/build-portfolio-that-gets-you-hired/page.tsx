@@ -55,10 +55,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "How do I build a Salesforce Admin portfolio?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Build a Salesforce Admin portfolio by working on real business scenarios — volunteer with nonprofits to implement Salesforce for free. For each project, document the business problem you solved, your analysis and recommendations, the Salesforce solution you implemented, and the measurable results and impact. Include visual evidence like screenshots of custom objects, before-and-after workflow diagrams, dashboard screenshots, and user training materials you developed.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What should I include in my Salesforce Admin portfolio?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A standout Salesforce Admin portfolio should include: real business scenario projects (not generic examples), detailed documentation of your process (problem, analysis, solution, results), visual evidence (screenshots, workflow diagrams, dashboards), quantified impact metrics (e.g., 'reduced data entry time by 60%', 'improved lead conversion by 25%'), and a professional website showcasing your certifications and case studies. The STAR method (Situation, Task, Action, Result) is recommended for structuring project descriptions.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Can I become a Salesforce Admin with no tech background?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, you can become a Salesforce Admin with no tech background. Salesforce is known for being accessible to career changers from non-technical fields. For example, teachers, project managers, and other professionals have successfully transitioned by leveraging transferable soft skills like user training, documentation, communication, and stakeholder management. Building a strong portfolio with real-world projects (such as volunteer work for nonprofits) and earning your Salesforce Administrator certification are the key steps to getting hired.",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "Build a Portfolio That Gets You Hired", item: "https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function BuildPortfolioThatGetsYouHiredPage() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

@@ -58,10 +58,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What are Lightning Web Components (LWC)?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Lightning Web Components (LWC) is Salesforce's modern UI framework that leverages standard web technologies (ES6+, Web Components) to deliver high-performance, interactive user interfaces within the Salesforce platform. LWC replaced legacy Aura components and runs natively in the browser, offering significantly better performance and reusability across Lightning App Builder and Digital Experiences (Communities).",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How do I learn LWC as a Salesforce Admin?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "To learn LWC as a Salesforce Admin, follow these three steps: First, learn Modern JavaScript (ES6+) — focus on arrow functions, destructuring, and modules, which covers 80% of what you need. Second, understand the DOM (how web pages are structured and manipulated). Third, master Salesforce Data Service — learn how to fetch data in LWC without writing Apex connectors using the wire service, which is a game-changer for Admin-to-Developer transitions.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Why is LWC important for Salesforce developers in 2026?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "LWC is the single biggest differentiator for Salesforce Developers in 2026 because users expect consumer-grade experiences inside their CRM. LWC provides native browser execution (dramatically faster than legacy Aura components), reusability (build once, use everywhere from App Builder to Digital Experiences), and alignment with web standards. As Salesforce becomes more of a Platform as a Service (PaaS), the ability to build custom interfaces with LWC determines your market value.",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "Mastering Lightning Web Components for Enterprise Development", item: "https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function MasteringLwcPage() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

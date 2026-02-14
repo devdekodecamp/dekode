@@ -1,0 +1,25 @@
+# DeKode Camp
+
+> DeKode Camp is a tech education platform that helps career changers and aspiring professionals break into the tech industry through structured training programs in Salesforce Administration, Salesforce Development, and Full Stack Development.
+
+## About
+DeKode Camp offers industry-leading tech education programs designed to transform careers. Based online, the platform provides hands-on training, certification preparation, and portfolio-building support to help students land tech jobs.
+
+## Programs
+- [Salesforce Admin (ADM-201)](https://www.dekodecamp.com/programs/salesforce-adm201): Comprehensive Salesforce Administrator certification training covering Flow Builder, data management, security, and customization.
+- [Salesforce Developer](https://www.dekodecamp.com/programs/salesforce-developer): Developer training covering Apex, Lightning Web Components (LWC), integrations, and DevOps.
+- [Full Stack Developer](https://www.dekodecamp.com/programs/full-stack-developer): Full-stack web development training covering modern JavaScript, React, Next.js, and Salesforce integration.
+- [Career Pathways](https://www.dekodecamp.com/programs/career-pathways): Guided career pathway programs for different tech career tracks.
+- [Salesforce Bootcamp](https://www.dekodecamp.com/salesforce-bootcamp): Intensive bootcamp-style Salesforce training.
+
+## Blog
+- [Essential Salesforce Admin Skills for 2025](https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025): The 10 essential technical and soft skills every Salesforce Admin needs.
+- [Salesforce Admin Journey: What to Expect](https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect): A complete roadmap from beginner to certified Salesforce Admin in 9-12 months.
+- [Build a Portfolio That Gets You Hired](https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired): How to build a standout Salesforce Admin portfolio with real projects and case studies.
+- [AI Agents in the Salesforce Ecosystem](https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem): How Einstein Copilot and Agentforce are transforming CRM automation.
+- [2026 Developer Trends: Salesforce & Full Stack](https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack): Why hybrid developers with Salesforce + full-stack skills earn 25% more.
+- [Mastering LWC for Enterprise Development](https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev): Guide to Lightning Web Components as the key differentiator for Salesforce Developers.
+
+## Contact
+- Website: https://www.dekodecamp.com
+- Email: info@dekodecamp.com

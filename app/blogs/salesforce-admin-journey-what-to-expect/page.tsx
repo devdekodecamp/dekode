@@ -55,10 +55,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "How long does it take to become a Salesforce Admin?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Becoming a Salesforce Admin typically takes 9-12 months, broken into three phases: Foundation Building (Months 1-3) where you learn platform fundamentals like navigation, core objects, data models, and basic reporting; Skill Development (Months 4-8) for advanced configuration, automation with Flow Builder, validation rules, and security controls; and Certification & Portfolio Building (Months 9-12) where you prepare for the Salesforce Administrator certification and build a portfolio of real projects.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What does a Salesforce Admin career path look like?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Salesforce Admin career path offers four main advancement tracks: Senior Administrator (leading complex implementations and mentoring junior admins), Salesforce Development (transitioning to Apex, Lightning Web Components, and custom integrations), Solution Architect (designing enterprise-level solutions across multiple Salesforce clouds), or Consultant (working with multiple clients to optimize their Salesforce implementations). Hiring managers look for technical competency, business understanding, communication skills, and continuous learning.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What do hiring managers look for in Salesforce Admin candidates?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Hiring managers look for four key qualities in Salesforce Admin candidates: Technical Competency (ability to handle real-world scenarios and discuss specific projects), Business Understanding (translating business requirements into technical Salesforce solutions), Communication Skills (training users and explaining technical concepts to non-technical stakeholders), and Continuous Learning (staying current with Salesforce's three annual releases through Trailhead, certifications, and community involvement).",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "Salesforce Admin Journey: What to Expect", item: "https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function SalesforceAdminJourneyPage() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

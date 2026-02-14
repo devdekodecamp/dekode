@@ -52,10 +52,71 @@ function BlogJsonLd() {
   );
 }
 
+function FaqJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What skills does a Salesforce Admin need in 2025?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Salesforce Admin in 2025 needs 10 essential skills: Advanced Flow Builder Mastery, Data Management & Analytics, Security & Access Management, Customization & Configuration, Integration Fundamentals, Business Process Analysis, Communication & Training, Change Management, Problem-Solving & Troubleshooting, and Continuous Learning & Adaptability.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What technical skills are most important for Salesforce Admins?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "The most important technical skills for Salesforce Admins in 2025 are Advanced Flow Builder Mastery (including Record-Triggered Flows, Screen Flows, and error handling), Data Management & Analytics (reporting, dashboards, Data Loader), Security & Access Management (profiles, permission sets, role hierarchy), Customization & Configuration (custom objects, page layouts, Lightning App Builder), and Integration Fundamentals (REST/SOAP APIs, Connected Apps, OAuth).",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What soft skills do Salesforce Admins need?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Salesforce Admins need strong soft skills including Business Process Analysis (translating requirements into solutions), Communication & Training (stakeholder communication, user training, documentation), Change Management (user adoption strategies, smooth transitions), Problem-Solving & Troubleshooting (debugging, performance optimization), and Continuous Learning to stay current with Salesforce's three annual releases.",
+              },
+            },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
+function BreadcrumbJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dekodecamp.com" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.dekodecamp.com/blogs" },
+            { "@type": "ListItem", position: 3, name: "Essential Salesforce Admin Skills for 2025", item: "https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025" },
+          ],
+        }),
+      }}
+    />
+  );
+}
+
 export default function EssentialSalesforceAdminSkills2025Page() {
   return (
     <div className="min-h-screen">
       <BlogJsonLd />
+      <FaqJsonLd />
+      <BreadcrumbJsonLd />
       <Navigation />
 
       {/* Hero */}

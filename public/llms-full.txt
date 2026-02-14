@@ -1,0 +1,153 @@
+# DeKode Camp — Full Site Documentation for AI Systems
+
+> DeKode Camp is a tech education platform specializing in Salesforce and Full Stack development training. The platform helps career changers, aspiring professionals, and students break into the tech industry through structured, hands-on training programs.
+
+---
+
+## Organization Details
+
+- **Name**: DeKode Camp
+- **Website**: https://www.dekodecamp.com
+- **Type**: Educational Organization / Tech Training Platform
+- **Contact**: info@dekodecamp.com
+- **Social Media**: Facebook, Instagram, LinkedIn (@dekodecamp)
+- **Tagline**: "Decode Tech, Unlock Your Future"
+
+---
+
+## Training Programs
+
+### Salesforce Admin (ADM-201)
+**URL**: https://www.dekodecamp.com/programs/salesforce-adm201
+
+Comprehensive Salesforce Administrator training program that prepares students for the Salesforce Administrator (ADM-201) certification exam. Covers:
+- Salesforce platform fundamentals (navigation, core objects, data model)
+- Data management and analytics (reports, dashboards, Data Loader)
+- Security and access management (profiles, permission sets, role hierarchy)
+- Automation with Flow Builder (record-triggered flows, screen flows)
+- Customization and configuration (custom objects, page layouts, Lightning App Builder)
+- Integration fundamentals (REST/SOAP APIs, Connected Apps)
+
+### Salesforce Developer
+**URL**: https://www.dekodecamp.com/programs/salesforce-developer
+
+Developer training program for building custom Salesforce applications. Covers:
+- Apex programming language for server-side logic
+- Lightning Web Components (LWC) for modern UI development
+- Salesforce API integration patterns
+- Einstein Copilot and Agentforce AI tools
+- DevOps for Salesforce (CI/CD with Salesforce DX, GitHub Actions)
+- Connected Apps and OAuth integration
+
+### Full Stack Developer
+**URL**: https://www.dekodecamp.com/programs/full-stack-developer
+
+Full-stack web development program covering modern web technologies. Covers:
+- Modern JavaScript (ES6+) and TypeScript
+- React and Next.js framework development
+- LWC (Lightning Web Components) for Salesforce front-ends
+- Building headless Salesforce apps with React/Next.js front-ends
+- Database design and API development
+- Deployment and hosting
+
+### Career Pathways
+**URL**: https://www.dekodecamp.com/programs/career-pathways
+
+Guided career pathway programs that help students choose the right tech career track based on their background, interests, and goals.
+
+### Salesforce Bootcamp
+**URL**: https://www.dekodecamp.com/salesforce-bootcamp
+
+Intensive bootcamp-style Salesforce training for students who want an accelerated learning experience.
+
+---
+
+## Blog Content
+
+### Essential Salesforce Admin Skills for 2025
+**URL**: https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025
+**Published**: January 18, 2026
+
+Comprehensive guide to the 10 essential skills every Salesforce Administrator needs in 2025:
+
+**Technical Skills:**
+1. Advanced Flow Builder Mastery (Record-Triggered Flows, Screen Flows, error handling)
+2. Data Management & Analytics (reporting, dashboards, Data Loader, deduplication)
+3. Security & Access Management (profiles, permission sets, role hierarchy, field-level security)
+4. Customization & Configuration (custom objects, page layouts, Lightning App Builder)
+5. Integration Fundamentals (REST/SOAP APIs, webhooks, Connected Apps, OAuth)
+
+**Soft Skills:**
+6. Business Process Analysis
+7. Communication & Training
+8. Change Management
+9. Problem-Solving & Troubleshooting
+10. Continuous Learning & Adaptability
+
+### Salesforce Admin Journey: What to Expect
+**URL**: https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect
+**Published**: January 25, 2026
+
+Complete roadmap for becoming a Salesforce Admin in 9-12 months:
+
+- **Phase 1 (Months 1-3)**: Foundation Building — platform navigation, core objects, data model, basic reporting, community engagement
+- **Phase 2 (Months 4-8)**: Skill Development — custom objects, page layouts, validation rules, Flow Builder automation, security controls
+- **Phase 3 (Months 9-12)**: Certification & Portfolio — ADM-201 exam prep (2-3 months focused study), portfolio with documented projects
+
+Career advancement tracks: Senior Administrator, Salesforce Development, Solution Architect, Consultant.
+
+### Build a Portfolio That Gets You Hired
+**URL**: https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired
+**Published**: January 22, 2026
+
+Case study of Sarah Martinez, a former teacher who transitioned to Salesforce Admin (earning 40% more) by building a standout portfolio. Key strategies:
+
+- Work on real business scenarios (volunteer with nonprofits)
+- Document your process (problem, analysis, solution, results)
+- Include visual evidence (screenshots, workflow diagrams, dashboards)
+- Quantify impact (e.g., "reduced data entry time by 60%", "improved lead conversion by 25%")
+- Use the STAR method for interview presentations
+- Leverage transferable soft skills from previous careers
+
+### AI Agents in the Salesforce Ecosystem
+**URL**: https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem
+**Published**: February 2, 2026
+
+Analysis of how AI agents (Einstein Copilot, Agentforce) are changing Salesforce:
+
+- AI agents differ from traditional automation — they are autonomous, capable of reasoning over unstructured data, and adaptive
+- Developers need new skills: Prompt Engineering for CRM, Guardrails & Security, Tool Creation (Apex actions, Flow templates)
+- Flow Builder and Apex remain foundational tools that AI agents use to interact with data
+- Einstein Copilot Studio for orchestrating AI tools
+
+### 2026 Developer Trends: Salesforce & Full Stack
+**URL**: https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack
+**Published**: February 4, 2026
+
+Key trends shaping developer careers in 2026:
+
+- **The Hybrid Developer**: Companies want developers who combine Salesforce platform skills with full-stack code (Next.js/React + Salesforce back-end)
+- **Top 3 high-salary skills**: LWC (Lightning Web Components), Salesforce API Integration, DevOps for Salesforce
+- Developers with dual Salesforce + JavaScript proficiency earn ~25% more than single-specialty peers
+- Salesforce handles auth, database, security out of the box; full-stack skills enable unique UX
+
+### Mastering LWC for Enterprise Development
+**URL**: https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev
+**Published**: January 28, 2026
+
+Guide to Lightning Web Components (LWC) as the key skill for Salesforce Developers:
+
+- LWC is Salesforce's modern UI framework using ES6+ and Web Components standards
+- Performance: native browser execution, far faster than legacy Aura components
+- Reusability: build once, use in App Builder and Digital Experiences (Communities)
+- Learning path for Admins: (1) Modern JavaScript ES6+, (2) DOM fundamentals, (3) Salesforce Data Service/wire service
+- LWC skills are the bridge between standard web development and the Salesforce ecosystem
+
+---
+
+## Other Pages
+
+- **Home**: https://www.dekodecamp.com — Main landing page with hero section, program overview, and calls to action
+- **About**: https://www.dekodecamp.com/about — Information about DeKode Camp's mission, team, and approach
+- **Contact**: https://www.dekodecamp.com/contact — Contact form and information
+- **Privacy Policy**: https://www.dekodecamp.com/privacy-policy — Privacy and data handling policies
