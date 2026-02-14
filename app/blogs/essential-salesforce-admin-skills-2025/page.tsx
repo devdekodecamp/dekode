@@ -23,12 +23,39 @@ export const metadata: Metadata = {
     url: "https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Essential Salesforce Admin Skills for 2025",
+    description: "Discover the essential technical and soft skills every Salesforce Admin needs in 2025.",
+  },
   keywords: ["Salesforce Admin skills", "Salesforce Admin 2025", "Flow Builder", "Salesforce certification", "Salesforce career"],
 };
+
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "10 Essential Skills Every Salesforce Admin Needs in 2025",
+          description: "Discover the essential technical and soft skills every Salesforce Admin needs in 2025.",
+          datePublished: "2026-01-18",
+          dateModified: "2026-01-18",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/essential-salesforce-admin-skills-2025" },
+        }),
+      }}
+    />
+  );
+}
 
 export default function EssentialSalesforceAdminSkills2025Page() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}

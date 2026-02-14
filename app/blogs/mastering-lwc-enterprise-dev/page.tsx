@@ -25,13 +25,43 @@ export const metadata: Metadata = {
     description: "A comprehensive guide to mastering LWC for enterprise Salesforce development.",
     url: "https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev",
     type: "article",
+    images: [{ url: "/images/blogs/mastering-lwc.png", width: 1200, height: 630, alt: "Mastering Lightning Web Components" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mastering Lightning Web Components for Enterprise Development",
+    description: "A comprehensive guide to mastering LWC for enterprise Salesforce development.",
+    images: ["/images/blogs/mastering-lwc.png"],
   },
   keywords: ["Lightning Web Components", "LWC", "Salesforce development", "enterprise development", "Salesforce developer"],
 };
 
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "Mastering Lightning Web Components: Your Ticket to High-Impact Roles",
+          description: "A comprehensive guide to mastering LWC for enterprise Salesforce development.",
+          image: "https://www.dekodecamp.com/images/blogs/mastering-lwc.png",
+          datePublished: "2026-01-28",
+          dateModified: "2026-01-28",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/mastering-lwc-enterprise-dev" },
+        }),
+      }}
+    />
+  );
+}
+
 export default function MasteringLwcPage() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}

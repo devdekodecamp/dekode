@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "DeKode Camp's privacy policy. Learn how we collect, use, and protect your personal information when you use our website and educational services.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | DeKode Camp",
+    description:
+      "Learn how DeKode Camp collects, uses, and protects your personal information.",
+    url: "https://www.dekodecamp.com/privacy-policy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | DeKode Camp",
+    description:
+      "Learn how DeKode Camp collects, uses, and protects your personal information.",
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (

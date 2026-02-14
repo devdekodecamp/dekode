@@ -26,13 +26,43 @@ export const metadata: Metadata = {
     description: "Explore the biggest developer trends shaping 2026 — from AI-powered Salesforce tools to full-stack innovations.",
     url: "https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack",
     type: "article",
+    images: [{ url: "/images/blogs/2026-trends.png", width: 1200, height: 630, alt: "2026 Developer Trends: Salesforce & Full Stack Skills" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "2026 Developer Trends: Salesforce & Full Stack",
+    description: "Explore the biggest developer trends shaping 2026 — from AI-powered Salesforce tools to full-stack innovations.",
+    images: ["/images/blogs/2026-trends.png"],
   },
   keywords: ["developer trends 2026", "Salesforce trends", "full stack development", "AI in Salesforce", "tech career"],
 };
 
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "2026 Developer Trends: Why Salesforce & Full Stack Skills Pay More",
+          description: "Explore the biggest developer trends shaping 2026 — from AI-powered Salesforce tools to full-stack innovations.",
+          image: "https://www.dekodecamp.com/images/blogs/2026-trends.png",
+          datePublished: "2026-02-04",
+          dateModified: "2026-02-04",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/2026-developer-trends-salesforce-fullstack" },
+        }),
+      }}
+    />
+  );
+}
+
 export default function DeveloperTrends2026Page() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}

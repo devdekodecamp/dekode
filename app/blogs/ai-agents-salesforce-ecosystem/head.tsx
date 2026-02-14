@@ -1,7 +1,0 @@
-import { CanonicalHead } from "@/components/canonical-head";
-
-export default function Head() {
-  return (
-    <CanonicalHead path="/blogs/ai-agents-salesforce-ecosystem" />
-  );
-}

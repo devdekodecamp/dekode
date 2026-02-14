@@ -25,13 +25,43 @@ export const metadata: Metadata = {
     description: "Discover how AI agents are transforming the Salesforce ecosystem and what it means for your career.",
     url: "https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem",
     type: "article",
+    images: [{ url: "/images/blogs/ai-agents-salesforce.png", width: 1200, height: 630, alt: "AI Agents in the Salesforce Ecosystem" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Agents in the Salesforce Ecosystem",
+    description: "Discover how AI agents are transforming the Salesforce ecosystem and what it means for your career.",
+    images: ["/images/blogs/ai-agents-salesforce.png"],
   },
   keywords: ["AI agents Salesforce", "Einstein Copilot", "Agentforce", "Salesforce AI", "Salesforce automation"],
 };
 
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "The Rise of AI Agents in the Salesforce Ecosystem",
+          description: "Discover how AI agents like Einstein Copilot and Agentforce are transforming the Salesforce ecosystem.",
+          image: "https://www.dekodecamp.com/images/blogs/ai-agents-salesforce.png",
+          datePublished: "2026-02-02",
+          dateModified: "2026-02-02",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/ai-agents-salesforce-ecosystem" },
+        }),
+      }}
+    />
+  );
+}
+
 export default function AiAgentsSalesforcePage() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}

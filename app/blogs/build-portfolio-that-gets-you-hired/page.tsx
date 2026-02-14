@@ -26,12 +26,39 @@ export const metadata: Metadata = {
     url: "https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Build a Portfolio That Gets You Hired as a Salesforce Admin",
+    description: "Learn how to build a standout Salesforce Admin portfolio that impresses hiring managers.",
+  },
   keywords: ["Salesforce portfolio", "Salesforce Admin", "get hired Salesforce", "Salesforce projects", "career tips"],
 };
+
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "How to Build a Portfolio That Gets You Hired",
+          description: "Learn how to build a standout Salesforce Admin portfolio that impresses hiring managers.",
+          datePublished: "2026-01-22",
+          dateModified: "2026-01-22",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/build-portfolio-that-gets-you-hired" },
+        }),
+      }}
+    />
+  );
+}
 
 export default function BuildPortfolioThatGetsYouHiredPage() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}

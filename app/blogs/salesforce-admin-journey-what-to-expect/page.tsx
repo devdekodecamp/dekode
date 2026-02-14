@@ -26,12 +26,39 @@ export const metadata: Metadata = {
     url: "https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salesforce Admin Journey: What to Expect",
+    description: "A complete guide to the Salesforce Admin career journey — from certification to landing your first role.",
+  },
   keywords: ["Salesforce Admin journey", "Salesforce career path", "Salesforce certification", "Salesforce job", "admin career"],
 };
+
+function BlogJsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "The Salesforce Admin Journey: What to Expect",
+          description: "A complete guide to the Salesforce Admin career journey — from certification to landing your first role.",
+          datePublished: "2026-01-25",
+          dateModified: "2026-01-25",
+          author: { "@type": "Organization", name: "DeKode Camp", url: "https://www.dekodecamp.com" },
+          publisher: { "@type": "Organization", name: "DeKode Camp", logo: { "@type": "ImageObject", url: "https://www.dekodecamp.com/logo.png" } },
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.dekodecamp.com/blogs/salesforce-admin-journey-what-to-expect" },
+        }),
+      }}
+    />
+  );
+}
 
 export default function SalesforceAdminJourneyPage() {
   return (
     <div className="min-h-screen">
+      <BlogJsonLd />
       <Navigation />
 
       {/* Hero */}
